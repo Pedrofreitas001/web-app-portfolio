@@ -25,33 +25,6 @@ export const PROJECTS: Project[] = [
     featured: true
   },
   {
-    id: "2",
-    slug: "dashboard-next",
-    title: "Dashboard Web Next.js",
-    category: "Web Development",
-    company: "Personal Project",
-    description: "Interface analítica customizada desenvolvida com Next.js e Tailwind CSS.",
-    coverImage: "https://picsum.photos/id/60/800/600",
-    context: "Desenvolvimento de uma solução frontend para visualização de dados que superasse as limitações visuais de ferramentas low-code. Foco em performance e UX.",
-    tools: ["Next.js", "TypeScript", "Tailwind CSS", "Recharts"],
-    images: ["https://picsum.photos/id/60/1200/800", "https://picsum.photos/id/180/1200/800"],
-    featured: true,
-    repoLink: "https://github.com"
-  },
-  {
-    id: "3",
-    slug: "automacao-mbastos",
-    title: "Automação de Conciliação Financeira",
-    category: "Automação Python",
-    company: "Mbastos",
-    description: "Script Python para conciliação automática de relatórios financeiros complexos.",
-    coverImage: "https://picsum.photos/id/119/800/600",
-    context: "A empresa gastava cerca de 15 horas semanais conciliando planilhas de diferentes adquirentes. A automação reduziu esse tempo para 3 minutos, cruzando dados de vendas, taxas e recebimentos.",
-    tools: ["Python", "Pandas", "OpenPyXL", "SQL"],
-    images: ["https://picsum.photos/id/119/1200/800"],
-    featured: true
-  },
-  {
     id: "4",
     slug: "relatorio-financeiro-consolidado",
     title: "Relatório Financeiro Consolidado",
@@ -84,19 +57,6 @@ export const PROJECTS: Project[] = [
       "https://i.imgur.com/l25IlpL.png"
     ],
     featured: true
-  },
-  {
-    id: "6",
-    slug: "barber-manager",
-    title: "BarberManager SaaS",
-    category: "Web App",
-    company: "Farol Dev",
-    description: "Sistema de gestão completo para barbearias e salões de beleza.",
-    coverImage: "https://picsum.photos/id/403/800/600",
-    context: "SaaS desenvolvido para agendamento, controle financeiro e gestão de comissões.",
-    tools: ["Next.js", "PostgreSQL", "Prisma", "Stripe"],
-    images: ["https://picsum.photos/id/403/1200/800"],
-    featured: false
   },
   {
     id: "7",
