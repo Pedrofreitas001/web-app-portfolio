@@ -1,8 +1,10 @@
 # 🚀 Deploy na Vercel - Passo a Passo
 
-## ⚠️ Importante: Configure as Variáveis de Ambiente
+## ⚠️ CRÍTICO: Configure as Variáveis de Ambiente ANTES do Deploy
 
-O deploy está falhando porque as variáveis de ambiente do Supabase precisam ser configuradas na Vercel.
+**O deploy falhará se você não configurar as variáveis de ambiente!**
+
+O erro "supabaseUrl is required" acontece porque o Vite precisa das variáveis de ambiente **durante o build**, não em runtime.
 
 ## 📝 Passo a Passo:
 
