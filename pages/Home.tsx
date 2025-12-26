@@ -87,7 +87,7 @@ const Home: React.FC = () => {
                         <GraduationCap size={20} />
                       </div>
                       <div>
-                        <h4 className="text-white font-bold text-sm">Formação Sólida</h4>
+                        <h4 className="text-white font-bold text-sm">Formação</h4>
                         <p className="text-slate-400 text-xs mt-1">Oceanografia USP</p>
                       </div>
                    </div>
@@ -127,8 +127,8 @@ const Home: React.FC = () => {
                </div>
 
                <div className="text-center mt-6">
-                 <h3 className="text-2xl font-bold font-display text-white">Pedro Freitas</h3>
-                 <p className="text-sm font-mono text-brand-400 mt-1">Oceanógrafo & Data Engineer</p>
+                 <h3 className="text-xl font-bold text-white">Pedro Freitas</h3>
+                 <p className="text-sm text-slate-400 mt-1">Oceanógrafo & Data Engineer</p>
                </div>
             </div>
           </div>
@@ -171,7 +171,7 @@ const Home: React.FC = () => {
         </div>
 
         {/* Full Width Tools Marquee */}
-        <div className="w-full border-y border-white/5 bg-black/50 backdrop-blur-sm py-6 mt-12">
+        <div className="w-full border-y border-white/5 bg-black/50 backdrop-blur-sm py-6 mt-20">
             <div className="relative flex overflow-hidden">
               <div className="animate-scroll flex gap-12 whitespace-nowrap min-w-full">
                 {[...TOOLS, ...TOOLS, ...TOOLS].map((tool, i) => (
