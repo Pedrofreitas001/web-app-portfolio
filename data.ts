@@ -38,6 +38,7 @@ export const PROJECTS: Project[] = [
       "https://i.imgur.com/w6wvRNS.png",
       "https://i.imgur.com/P1aNapK.png"
     ],
+    liveLink: "https://dashboard-contabil.vercel.app/",
     featured: true
   },
   {
@@ -56,6 +57,7 @@ export const PROJECTS: Project[] = [
       "https://i.imgur.com/RbznGwO.png",
       "https://i.imgur.com/l25IlpL.png"
     ],
+    liveLink: "https://farol-dev-moc.vercel.app/",
     featured: true
   },
   {
@@ -73,6 +75,7 @@ export const PROJECTS: Project[] = [
       "https://i.imgur.com/AGRJaS4.png",
       "https://i.imgur.com/i42clg4.png"
     ],
+    liveLink: "https://afinador-violao.vercel.app/",
     featured: true
   }
 ];
