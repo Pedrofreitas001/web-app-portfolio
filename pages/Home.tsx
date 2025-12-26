@@ -63,13 +63,9 @@ const Home: React.FC = () => {
                 <div className="absolute top-0 right-0 w-32 h-32 bg-brand-500/10 rounded-full blur-3xl pointer-events-none"></div>
 
                 <div className="mb-6">
-                  <span className="inline-block px-3 py-1 rounded-full bg-brand-500/10 border border-brand-500/20 text-brand-300 text-xs font-semibold uppercase tracking-wider mb-4">
+                  <span className="inline-block px-3 py-1 rounded-full bg-brand-500/10 border border-brand-500/20 text-brand-300 text-xs font-semibold uppercase tracking-wider">
                     Sobre Mim
                   </span>
-                  <h2 className="text-3xl md:text-4xl font-bold font-display text-white leading-tight">
-                    Da complexidade dos oceanos <br/>
-                    <span className="text-transparent bg-clip-text bg-gradient-to-r from-brand-400 to-purple-400">à precisão dos dados.</span>
-                  </h2>
                 </div>
 
                 <div className="space-y-4 text-slate-300 leading-relaxed">
@@ -139,12 +135,12 @@ const Home: React.FC = () => {
         </div>
 
         {/* Full Width Tools Marquee */}
-        <div className="w-full border-y border-white/5 bg-white/5 backdrop-blur-sm py-10">
+        <div className="w-full border-y border-white/5 bg-white/5 backdrop-blur-sm py-6 mt-12">
             <div className="relative flex overflow-hidden">
-              <div className="animate-scroll flex gap-16 whitespace-nowrap min-w-full">
+              <div className="animate-scroll flex gap-12 whitespace-nowrap min-w-full">
                 {[...TOOLS, ...TOOLS, ...TOOLS].map((tool, i) => (
-                  <span key={i} className="text-2xl font-bold text-slate-400 flex items-center gap-4 hover:text-white transition-colors">
-                      <span className="w-2 h-2 rounded-full bg-brand-500 shadow-[0_0_10px_rgba(14,165,233,0.5)]"></span> {tool}
+                  <span key={i} className="text-lg font-semibold text-slate-500 flex items-center gap-3 hover:text-brand-400 transition-colors">
+                      <span className="w-1.5 h-1.5 rounded-full bg-brand-500/70"></span> {tool}
                   </span>
                 ))}
               </div>
@@ -153,27 +149,36 @@ const Home: React.FC = () => {
       </section>
 
       {/* 3. FUNDAMENTALS SECTION */}
-      <section className="py-24 bg-[#0a0c16]">
-        <div className="max-w-7xl mx-auto px-6">
-          <h2 className="text-3xl md:text-4xl font-bold font-display text-white mb-16 text-center">
-            Fundamentos em Data Solutions
-          </h2>
+      <section className="py-20 bg-gradient-to-b from-[#0a0c16] to-[#0B0D14] relative overflow-hidden">
+        {/* Background decoration */}
+        <div className="absolute top-0 left-1/4 w-96 h-96 bg-brand-600/5 rounded-full blur-3xl"></div>
+        <div className="absolute bottom-0 right-1/4 w-96 h-96 bg-purple-600/5 rounded-full blur-3xl"></div>
 
-          <div className="grid md:grid-cols-3 gap-8">
-            <FundamentalCard 
-              icon={<LineChart size={32} className="text-purple-400" />}
-              title="Tomada de decisão orientada a dados"
-              text="Utilizo dados como base para análise e planejamento, transformando números brutos em insights estratégicos para o negócio."
+        <div className="max-w-6xl mx-auto px-6 relative z-10">
+          <div className="text-center mb-12">
+            <span className="inline-block px-3 py-1 rounded-full bg-brand-500/10 border border-brand-500/20 text-brand-300 text-xs font-semibold uppercase tracking-wider mb-3">
+              Abordagem
+            </span>
+            <h2 className="text-2xl md:text-3xl font-bold font-display text-white">
+              Fundamentos em Data Solutions
+            </h2>
+          </div>
+
+          <div className="grid md:grid-cols-3 gap-6">
+            <FundamentalCard
+              icon={<LineChart size={28} className="text-purple-400" />}
+              title="Data-Driven"
+              text="Transformo números brutos em insights estratégicos para tomada de decisão."
             />
-            <FundamentalCard 
-              icon={<Code2 size={32} className="text-brand-400" />}
-              title="Automação & Produtividade"
-              text="Elimino tarefas repetitivas e manuais através de scripts e pipelines inteligentes, liberando tempo para análises de alto valor."
+            <FundamentalCard
+              icon={<Code2 size={28} className="text-brand-400" />}
+              title="Automação"
+              text="Scripts e pipelines inteligentes que eliminam trabalho manual repetitivo."
             />
-            <FundamentalCard 
-              icon={<FileText size={32} className="text-emerald-400" />}
-              title="Documentação & Escalabilidade"
-              text="Construo soluções pensadas para crescer. Código limpo, pipelines robustos e documentação clara para garantir manutenibilidade."
+            <FundamentalCard
+              icon={<FileText size={28} className="text-emerald-400" />}
+              title="Escalabilidade"
+              text="Soluções robustas com código limpo e documentação clara."
             />
           </div>
         </div>
@@ -209,12 +214,14 @@ const Home: React.FC = () => {
 };
 
 const FundamentalCard: React.FC<{ icon: React.ReactNode; title: string; text: string }> = ({ icon, title, text }) => (
-  <div className="glass-panel p-8 rounded-2xl hover:bg-white/5 transition-all duration-300 hover:-translate-y-2 group">
-    <div className="mb-6 p-4 bg-dark-900 rounded-xl inline-block border border-white/5 group-hover:border-brand-500/30 transition-colors">
-      {icon}
+  <div className="group relative bg-white/[0.02] backdrop-blur-sm border border-white/5 rounded-2xl p-6 hover:bg-white/[0.05] hover:border-brand-500/30 transition-all duration-300">
+    <div className="flex items-start gap-4 mb-4">
+      <div className="p-3 bg-dark-900/50 rounded-xl border border-white/5 group-hover:border-brand-500/20 group-hover:bg-dark-900/80 transition-all">
+        {icon}
+      </div>
+      <h3 className="text-lg font-bold text-white mt-2">{title}</h3>
     </div>
-    <h3 className="text-xl font-bold text-white mb-4">{title}</h3>
-    <p className="text-slate-400 leading-relaxed">{text}</p>
+    <p className="text-slate-400 text-sm leading-relaxed">{text}</p>
   </div>
 );
 
