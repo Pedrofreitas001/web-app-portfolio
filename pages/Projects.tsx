@@ -1,11 +1,26 @@
-import React from 'react';
+import React, { useState } from 'react';
 import { Link } from 'react-router-dom';
 import { ArrowUpRight, Filter } from 'lucide-react';
 import { PROJECTS } from '../data';
 import StarBackground from '../components/StarBackground';
 
 const Projects: React.FC = () => {
-  const projects = PROJECTS;
+  const [selectedFilter, setSelectedFilter] = useState<string>('Todos');
+
+  const filteredProjects = selectedFilter === 'Todos'
+    ? PROJECTS
+    : PROJECTS.filter(project => {
+        if (selectedFilter === 'Power BI') {
+          return project.tools.includes('Power BI') || project.tools.includes('DAX') || project.tools.includes('M Language');
+        }
+        if (selectedFilter === 'Python') {
+          return project.tools.includes('Python');
+        }
+        if (selectedFilter === 'Web Dev') {
+          return project.tools.includes('React') || project.tools.includes('Next.js') || project.tools.includes('Tailwind CSS');
+        }
+        return true;
+      });
 
   return (
     <div className="min-h-screen bg-gradient-to-b from-black via-[#030308] to-black pt-32 pb-24 relative">
@@ -21,24 +36,33 @@ const Projects: React.FC = () => {
           </p>
         </div>
 
-        {/* Filter Bar (Visual only for now) */}
+        {/* Filter Bar */}
         <div className="flex flex-wrap gap-4 mb-12">
-            <button className="px-4 py-2 rounded-full bg-brand-600 text-white text-sm font-medium">Todos</button>
-            <button className="px-4 py-2 rounded-full bg-dark-900 border border-white/10 text-slate-300 text-sm font-medium hover:bg-dark-800 transition-colors">Power BI</button>
-            <button className="px-4 py-2 rounded-full bg-dark-900 border border-white/10 text-slate-300 text-sm font-medium hover:bg-dark-800 transition-colors">Python</button>
-            <button className="px-4 py-2 rounded-full bg-dark-900 border border-white/10 text-slate-300 text-sm font-medium hover:bg-dark-800 transition-colors">Web Dev</button>
+            {['Todos', 'Power BI', 'Python', 'Web Dev'].map(filter => (
+              <button
+                key={filter}
+                onClick={() => setSelectedFilter(filter)}
+                className={`px-4 py-2 rounded-full text-sm font-medium transition-colors ${
+                  selectedFilter === filter
+                    ? 'bg-brand-600 text-white'
+                    : 'bg-dark-900 border border-white/10 text-slate-300 hover:bg-dark-800'
+                }`}
+              >
+                {filter}
+              </button>
+            ))}
         </div>
 
         {/* Projects Grid */}
         <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
-          {projects.map((project) => (
+          {filteredProjects.map((project) => (
             <Link 
               key={project.id} 
               to={`/project/${project.slug}`}
               className="group bg-dark-900 border border-white/5 rounded-xl overflow-hidden hover:border-brand-500/50 hover:shadow-2xl hover:shadow-brand-500/10 transition-all duration-300 flex flex-col h-full"
             >
               {/* Image Container */}
-              <div className="relative h-56 overflow-hidden">
+              <div className="relative h-48 overflow-hidden">
                 <div className="absolute inset-0 bg-dark-950/20 group-hover:bg-transparent transition-colors z-10"></div>
                 <img
                   src={project.coverImage}
