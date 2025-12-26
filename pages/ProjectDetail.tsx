@@ -1,6 +1,6 @@
-import React, { useEffect } from 'react';
+import React, { useEffect, useState } from 'react';
 import { useParams, Link, useNavigate } from 'react-router-dom';
-import { ArrowLeft, ExternalLink, Github, Layers, Database, Wrench } from 'lucide-react';
+import { ArrowLeft, ExternalLink, Github, Layers, Database, Wrench, X, ZoomIn } from 'lucide-react';
 import { PROJECTS } from '../data';
 import StarBackground from '../components/StarBackground';
 
@@ -8,14 +8,27 @@ const ProjectDetail: React.FC = () => {
   const { slug } = useParams<{ slug: string }>();
   const navigate = useNavigate();
   const project = PROJECTS.find(p => p.slug === slug);
+  const [lightboxImage, setLightboxImage] = useState<string | null>(null);
 
   useEffect(() => {
     window.scrollTo(0, 0);
   }, [slug]);
 
+  useEffect(() => {
+    // Prevent body scroll when lightbox is open
+    if (lightboxImage) {
+      document.body.style.overflow = 'hidden';
+    } else {
+      document.body.style.overflow = 'unset';
+    }
+    return () => {
+      document.body.style.overflow = 'unset';
+    };
+  }, [lightboxImage]);
+
   if (!project) {
     return (
-      <div className="min-h-screen flex items-center justify-center bg-dark-950 text-white">
+      <div className="min-h-screen flex items-center justify-center bg-gradient-to-b from-black via-[#0f0f14] to-[#1a1a22] text-white">
         <div className="text-center">
           <h2 className="text-3xl font-bold mb-4">Projeto não encontrado</h2>
           <Link to="/projects" className="text-brand-400 hover:underline">Voltar para projetos</Link>
@@ -25,13 +38,13 @@ const ProjectDetail: React.FC = () => {
   }
 
   return (
-    <div className="min-h-screen bg-dark-950 pb-24 relative">
+    <div className="min-h-screen bg-gradient-to-b from-black via-[#0f0f14] to-[#1a1a22] pb-24 relative">
       <div className="fixed inset-0 z-0">
-         <div className="absolute top-0 w-full h-[50vh] bg-gradient-to-b from-brand-900/20 to-dark-950"></div>
+         <div className="absolute top-0 w-full h-[50vh] bg-gradient-to-b from-brand-900/10 to-transparent"></div>
          <StarBackground />
       </div>
 
-      <div className="relative z-10 pt-32 max-w-5xl mx-auto px-6">
+      <div className="relative z-10 pt-32 max-w-6xl mx-auto px-6">
         <button onClick={() => navigate(-1)} className="mb-8 flex items-center gap-2 text-slate-400 hover:text-white transition-colors group">
           <ArrowLeft size={20} className="group-hover:-translate-x-1 transition-transform" />
           Voltar
@@ -49,7 +62,7 @@ const ProjectDetail: React.FC = () => {
                </span>
              )}
            </div>
-           
+
            <h1 className="text-4xl md:text-6xl font-bold font-display text-white mb-6 leading-tight">
              {project.title}
            </h1>
@@ -69,9 +82,9 @@ const ProjectDetail: React.FC = () => {
         </header>
 
         {/* Content Grid */}
-        <div className="grid lg:grid-cols-3 gap-12 mb-16">
+        <div className="grid lg:grid-cols-4 gap-8 mb-16">
            {/* Main Column */}
-           <div className="lg:col-span-2 space-y-12">
+           <div className="lg:col-span-3 space-y-12">
               {/* Context */}
               <section className="glass-panel p-8 rounded-2xl animate-fade-in-up" style={{ animationDelay: '0.1s' }}>
                  <div className="flex items-center gap-3 mb-4 text-brand-400">
@@ -95,11 +108,33 @@ const ProjectDetail: React.FC = () => {
                    </p>
                 </section>
               )}
+
+              {/* Gallery - Now in main column for larger images */}
+              <section className="space-y-8 animate-fade-in-up" style={{ animationDelay: '0.3s' }}>
+                <h2 className="text-2xl font-bold font-display text-white border-l-4 border-brand-500 pl-4">Galeria do Projeto</h2>
+                <div className="grid gap-8">
+                   {project.images.map((img, idx) => (
+                      <div
+                        key={idx}
+                        className="group relative rounded-xl overflow-hidden border border-white/10 shadow-2xl cursor-pointer"
+                        onClick={() => setLightboxImage(img)}
+                      >
+                         <div className="absolute inset-0 bg-black/40 opacity-0 group-hover:opacity-100 transition-opacity duration-300 flex items-center justify-center z-10">
+                           <div className="flex items-center gap-2 text-white font-semibold bg-brand-600 px-4 py-2 rounded-lg">
+                             <ZoomIn size={20} />
+                             Ampliar
+                           </div>
+                         </div>
+                         <img src={img} alt={`Screenshot ${idx + 1}`} className="w-full h-auto object-cover" />
+                      </div>
+                   ))}
+                </div>
+              </section>
            </div>
 
-           {/* Sidebar */}
-           <div className="space-y-8 animate-fade-in-up" style={{ animationDelay: '0.3s' }}>
-              <div className="bg-dark-900 border border-white/10 p-6 rounded-2xl sticky top-32">
+           {/* Sidebar - Static Tools */}
+           <div className="lg:col-span-1 animate-fade-in-up" style={{ animationDelay: '0.4s' }}>
+              <div className="bg-dark-900/80 backdrop-blur border border-white/10 p-6 rounded-2xl">
                  <div className="flex items-center gap-2 mb-6 text-purple-400">
                     <Wrench size={24} />
                     <h3 className="text-xl font-bold text-white">Ferramentas</h3>
@@ -115,24 +150,32 @@ const ProjectDetail: React.FC = () => {
            </div>
         </div>
 
-        {/* Gallery */}
-        <section className="space-y-8 animate-fade-in-up" style={{ animationDelay: '0.4s' }}>
-          <h2 className="text-2xl font-bold font-display text-white border-l-4 border-brand-500 pl-4">Galeria do Projeto</h2>
-          <div className="grid md:grid-cols-2 gap-6">
-             {project.images.map((img, idx) => (
-                <div key={idx} className="group relative rounded-xl overflow-hidden border border-white/10 shadow-2xl">
-                   <div className="absolute inset-0 bg-brand-900/20 group-hover:bg-transparent transition-colors duration-300"></div>
-                   <img src={img} alt={`Screenshot ${idx + 1}`} className="w-full h-auto object-cover transform group-hover:scale-105 transition-transform duration-500" />
-                </div>
-             ))}
-          </div>
-        </section>
-
         <div className="mt-16 pt-8 border-t border-white/5 text-center">
             <Link to="/projects" className="text-slate-400 hover:text-white transition-colors">Voltar para lista de projetos</Link>
         </div>
 
       </div>
+
+      {/* Lightbox Modal */}
+      {lightboxImage && (
+        <div
+          className="fixed inset-0 z-50 bg-black/95 flex items-center justify-center p-4 animate-fade-in"
+          onClick={() => setLightboxImage(null)}
+        >
+          <button
+            className="absolute top-6 right-6 text-white hover:text-brand-400 transition-colors p-2 bg-dark-900/50 rounded-lg"
+            onClick={() => setLightboxImage(null)}
+          >
+            <X size={32} />
+          </button>
+          <img
+            src={lightboxImage}
+            alt="Imagem ampliada"
+            className="max-w-full max-h-[90vh] object-contain rounded-lg shadow-2xl"
+            onClick={(e) => e.stopPropagation()}
+          />
+        </div>
+      )}
     </div>
   );
 };

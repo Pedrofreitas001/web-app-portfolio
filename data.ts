@@ -31,7 +31,7 @@ export const PROJECTS: Project[] = [
     category: "Web App",
     company: "Startup FinTech",
     description: "Dashboard interativo para análise de dados financeiros consolidados (DRE).",
-    coverImage: "https://i.imgur.com/YgpN5qN.png",
+    coverImage: "https://i.imgur.com/ZpTk2Ik.png",
     context: "Dashboard financeiro interativo desenvolvido em Python com Streamlit, voltado ao fechamento contábil, com interface moderna customizada via código e CSS. A solução centraliza indicadores financeiros, oferece filtros dinâmicos, upload de dados via Excel, exportação de relatórios em PDF e controle de acesso, entregando uma visão executiva clara, segura e independente de ferramentas proprietárias.",
     tools: ["Python", "Pandas", "Streamlit", "Google AI Studio"],
     images: [
@@ -47,7 +47,7 @@ export const PROJECTS: Project[] = [
     category: "Site",
     company: "Farol Dev",
     description: "Website institucional moderno e escalável.",
-    coverImage: "https://i.imgur.com/4Bp4bxd.png",
+    coverImage: "https://i.imgur.com/vPaFzNV.png",
     context: "Website institucional desenvolvido para a Farol Dev, com foco em apresentar a empresa, seus serviços e sua proposta de valor de forma clara, moderna e estratégica. A arquitetura do front-end foi pensada para escalabilidade, fácil manutenção e rápida implantação, com integração a fluxos de deploy contínuo em plataformas como Vercel, garantindo eficiência e confiabilidade em ambiente produtivo. O projeto foi construído com Next.js, React e Tailwind CSS, adotando princípios de UI/UX moderno, alta performance, responsividade e animações sutis para elevar a experiência do usuário.",
     tools: ["Next.js", "React", "Tailwind CSS"],
     images: [
@@ -65,7 +65,7 @@ export const PROJECTS: Project[] = [
     category: "Web App",
     company: "Personal Project",
     description: "Web App de um afinador de violão e guitarra.",
-    coverImage: "https://i.imgur.com/NnPnELw.png",
+    coverImage: "https://i.imgur.com/jyETOq9.png",
     context: "Aplicação web desenvolvida em Python com interface front-end interativa, projetada para auxiliar na afinação precisa do violão em tempo real. O sistema capta o áudio, identifica a frequência das cordas e fornece feedback visual claro e intuitivo, permitindo ajustes rápidos e precisos. A solução combina processamento de sinais no backend com uma experiência de uso simples e responsiva no front-end.",
     tools: ["Python", "React", "Tailwind CSS"],
     images: [
