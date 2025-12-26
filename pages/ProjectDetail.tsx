@@ -15,7 +15,7 @@ const ProjectDetail: React.FC = () => {
 
   if (!project) {
     return (
-      <div className="min-h-screen flex items-center justify-center bg-[#2d1520] text-white">
+      <div className="min-h-screen flex items-center justify-center bg-gradient-to-b from-black via-[#0f0f14] to-[#1a1a22] text-white">
         <div className="text-center">
           <h2 className="text-3xl font-bold mb-4">Projeto não encontrado</h2>
           <Link to="/projects" className="text-brand-400 hover:underline">Voltar para projetos</Link>
@@ -25,9 +25,9 @@ const ProjectDetail: React.FC = () => {
   }
 
   return (
-    <div className="min-h-screen bg-[#2d1520] pb-24 relative">
+    <div className="min-h-screen bg-gradient-to-b from-black via-[#0f0f14] to-[#1a1a22] pb-24 relative">
       <div className="fixed inset-0 z-0">
-         <div className="absolute top-0 w-full h-[50vh] bg-gradient-to-b from-brand-900/20 to-[#2d1520]"></div>
+         <div className="absolute top-0 w-full h-[50vh] bg-gradient-to-b from-brand-900/10 to-transparent"></div>
          <StarBackground />
       </div>
 
