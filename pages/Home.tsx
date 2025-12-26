@@ -8,12 +8,12 @@ const Home: React.FC = () => {
   return (
     <div className="relative">
       {/* 1. HERO SECTION */}
-      <section className="relative min-h-screen flex items-center justify-center pt-20 overflow-hidden bg-gradient-to-b from-dark-950 via-[#0f1025] to-dark-950">
+      <section className="relative min-h-screen flex items-center justify-center pt-20 overflow-hidden bg-gradient-to-b from-black via-[#030308] to-black">
         <StarBackground />
-        
+
         {/* Decorative Glows */}
-        <div className="absolute top-1/3 left-1/2 -translate-x-1/2 w-[600px] h-[600px] bg-brand-600/10 rounded-full blur-[120px] pointer-events-none"></div>
-        <div className="absolute bottom-0 right-0 w-[400px] h-[400px] bg-purple-900/10 rounded-full blur-[100px] pointer-events-none"></div>
+        <div className="absolute top-1/3 left-1/2 -translate-x-1/2 w-[600px] h-[600px] bg-brand-600/5 rounded-full blur-[120px] pointer-events-none"></div>
+        <div className="absolute bottom-0 right-0 w-[400px] h-[400px] bg-purple-900/5 rounded-full blur-[100px] pointer-events-none"></div>
 
         <div className="relative z-10 max-w-4xl px-6 text-center">
           <div className="inline-block mb-6 px-4 py-1.5 rounded-full border border-brand-500/30 bg-brand-900/10 backdrop-blur-sm">
@@ -52,15 +52,15 @@ const Home: React.FC = () => {
       </section>
 
       {/* 2. ABOUT ME SECTION */}
-      <section className="py-24 bg-[#0B0D14] relative overflow-hidden border-t border-white/5">
+      <section className="py-24 bg-black relative overflow-hidden border-t border-white/5">
         <div className="max-w-6xl mx-auto px-6 mb-20">
           <div className="grid md:grid-cols-12 gap-8 items-start">
 
             {/* Left: Content (Span 8 cols) */}
             <div className="md:col-span-8 order-2 md:order-1">
-              <div className="bg-white/5 border border-white/10 backdrop-blur-sm p-8 md:p-10 rounded-3xl relative overflow-hidden">
+              <div className="bg-white/[0.02] border border-white/5 backdrop-blur-sm p-8 md:p-10 rounded-3xl relative overflow-hidden">
                 {/* Decoration */}
-                <div className="absolute top-0 right-0 w-32 h-32 bg-brand-500/10 rounded-full blur-3xl pointer-events-none"></div>
+                <div className="absolute top-0 right-0 w-32 h-32 bg-brand-500/5 rounded-full blur-3xl pointer-events-none"></div>
 
                 <div className="mb-6">
                   <span className="inline-block px-3 py-1 rounded-full bg-brand-500/10 border border-brand-500/20 text-brand-300 text-xs font-semibold uppercase tracking-wider">
@@ -135,7 +135,7 @@ const Home: React.FC = () => {
         </div>
 
         {/* Full Width Tools Marquee */}
-        <div className="w-full border-y border-white/5 bg-white/5 backdrop-blur-sm py-6 mt-12">
+        <div className="w-full border-y border-white/5 bg-black/50 backdrop-blur-sm py-6 mt-12">
             <div className="relative flex overflow-hidden">
               <div className="animate-scroll flex gap-12 whitespace-nowrap min-w-full">
                 {[...TOOLS, ...TOOLS, ...TOOLS].map((tool, i) => (
@@ -149,10 +149,10 @@ const Home: React.FC = () => {
       </section>
 
       {/* 3. FUNDAMENTALS SECTION */}
-      <section className="py-20 bg-gradient-to-b from-[#0a0c16] to-[#0B0D14] relative overflow-hidden">
+      <section className="py-20 bg-gradient-to-b from-black via-[#020204] to-black relative overflow-hidden">
         {/* Background decoration */}
-        <div className="absolute top-0 left-1/4 w-96 h-96 bg-brand-600/5 rounded-full blur-3xl"></div>
-        <div className="absolute bottom-0 right-1/4 w-96 h-96 bg-purple-600/5 rounded-full blur-3xl"></div>
+        <div className="absolute top-0 left-1/4 w-96 h-96 bg-brand-600/3 rounded-full blur-3xl"></div>
+        <div className="absolute bottom-0 right-1/4 w-96 h-96 bg-purple-600/3 rounded-full blur-3xl"></div>
 
         <div className="max-w-6xl mx-auto px-6 relative z-10">
           <div className="text-center mb-12">
@@ -185,7 +185,7 @@ const Home: React.FC = () => {
       </section>
 
       {/* Contact Section Placeholder */}
-      <section id="contact" className="py-24 bg-dark-950 border-t border-white/5">
+      <section id="contact" className="py-24 bg-black border-t border-white/5">
          <div className="max-w-3xl mx-auto px-6 text-center">
             <h2 className="text-3xl font-bold font-display text-white mb-8">Vamos trabalhar juntos?</h2>
             <form className="space-y-4 text-left glass-panel p-8 rounded-2xl">
