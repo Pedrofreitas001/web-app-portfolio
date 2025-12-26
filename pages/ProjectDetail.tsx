@@ -132,9 +132,9 @@ const ProjectDetail: React.FC = () => {
               </section>
            </div>
 
-           {/* Sidebar - Fixed Tools */}
+           {/* Sidebar - Static Tools */}
            <div className="lg:col-span-1 animate-fade-in-up" style={{ animationDelay: '0.4s' }}>
-              <div className="bg-dark-900/80 backdrop-blur border border-white/10 p-6 rounded-2xl sticky top-24 max-h-[calc(100vh-8rem)] overflow-y-auto">
+              <div className="bg-dark-900/80 backdrop-blur border border-white/10 p-6 rounded-2xl">
                  <div className="flex items-center gap-2 mb-6 text-purple-400">
                     <Wrench size={24} />
                     <h3 className="text-xl font-bold text-white">Ferramentas</h3>

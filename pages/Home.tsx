@@ -60,9 +60,9 @@ const Home: React.FC = () => {
             <div className="md:col-span-5 relative group mx-auto md:mx-0">
                <div className="absolute inset-0 bg-gradient-to-tr from-brand-600 to-purple-600 rounded-2xl blur-xl opacity-30 group-hover:opacity-50 transition-opacity duration-500"></div>
                <div className="relative w-full aspect-square md:aspect-[4/5] rounded-2xl overflow-hidden border border-white/10 shadow-2xl">
-                 <img 
-                   src="https://picsum.photos/id/1005/800/800" 
-                   alt="Pedro Freitas" 
+                 <img
+                   src="https://i.imgur.com/XUSFsuD.png"
+                   alt="Pedro Freitas"
                    className="w-full h-full object-cover filter brightness-110 contrast-110"
                  />
                  {/* Overlay Gradient on Image */}
@@ -88,12 +88,13 @@ const Home: React.FC = () => {
                 
                 <div className="space-y-4 text-slate-300 leading-relaxed text-lg">
                   <p>
-                    Minha trajetória começou na USP, onde aprendi a modelar sistemas complexos como Oceanógrafo. Hoje, trago esse 
-                    <strong className="text-white font-medium"> rigor analítico e científico</strong> para a Engenharia de Dados.
+                    Oceanógrafo pela Universidade de São Paulo (USP), com cerca de dois anos de experiência em análise e engenharia de dados.
+                    Atuou em projetos de consultoria nas áreas de engenharia, meio ambiente e energia, com foco no desenvolvimento de pipelines de dados,
+                    fluxos de automação e dashboards interativos em Power BI.
                   </p>
                   <p>
-                    Não apenas construo pipelines; eu transformo dados brutos em narrativas estratégicas. Com expertise em 
-                    <span className="text-brand-300"> Python, SQL e Power BI</span>, desenvolvo soluções que conectam a técnica à tomada de decisão de negócio.
+                    Possui experiência com <span className="text-brand-300">Python, SQL, DAX, M, Power Automate e Microsoft Fabric</span>.
+                    Interessado em inteligência artificial e em soluções tecnológicas voltadas à inovação e à eficiência de processos.
                   </p>
                 </div>
 
