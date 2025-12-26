@@ -52,15 +52,15 @@ const Home: React.FC = () => {
       </section>
 
       {/* 2. ABOUT ME SECTION */}
-      <section className="py-24 bg-black relative overflow-hidden border-t border-white/5">
+      <section className="py-24 bg-gradient-to-b from-[#0a0a0f] to-[#0f0f14] relative overflow-hidden border-t border-white/5">
         <div className="max-w-6xl mx-auto px-6 mb-20">
           <div className="grid md:grid-cols-12 gap-8 items-start">
 
             {/* Left: Content (Span 8 cols) */}
             <div className="md:col-span-8 order-2 md:order-1">
-              <div className="bg-white/[0.02] border border-white/5 backdrop-blur-sm p-8 md:p-10 rounded-3xl relative overflow-hidden">
+              <div className="bg-[#131318]/50 border border-white/10 backdrop-blur-sm p-8 md:p-10 rounded-3xl relative overflow-hidden">
                 {/* Decoration */}
-                <div className="absolute top-0 right-0 w-32 h-32 bg-brand-500/5 rounded-full blur-3xl pointer-events-none"></div>
+                <div className="absolute top-0 right-0 w-32 h-32 bg-brand-500/10 rounded-full blur-3xl pointer-events-none"></div>
 
                 <div className="mb-6">
                   <span className="inline-block px-3 py-1 rounded-full bg-brand-500/10 border border-brand-500/20 text-brand-300 text-xs font-semibold uppercase tracking-wider">
@@ -149,10 +149,10 @@ const Home: React.FC = () => {
       </section>
 
       {/* 3. FUNDAMENTALS SECTION */}
-      <section className="py-20 bg-gradient-to-b from-black via-[#020204] to-black relative overflow-hidden">
+      <section className="py-20 bg-gradient-to-b from-[#0f0f14] via-[#13131a] to-[#0f0f14] relative overflow-hidden border-t border-white/5">
         {/* Background decoration */}
-        <div className="absolute top-0 left-1/4 w-96 h-96 bg-brand-600/3 rounded-full blur-3xl"></div>
-        <div className="absolute bottom-0 right-1/4 w-96 h-96 bg-purple-600/3 rounded-full blur-3xl"></div>
+        <div className="absolute top-0 left-1/4 w-96 h-96 bg-brand-600/5 rounded-full blur-3xl"></div>
+        <div className="absolute bottom-0 right-1/4 w-96 h-96 bg-purple-600/5 rounded-full blur-3xl"></div>
 
         <div className="max-w-6xl mx-auto px-6 relative z-10">
           <div className="text-center mb-12">
@@ -185,7 +185,7 @@ const Home: React.FC = () => {
       </section>
 
       {/* Contact Section Placeholder */}
-      <section id="contact" className="py-24 bg-black border-t border-white/5">
+      <section id="contact" className="py-24 bg-gradient-to-b from-[#0a0a0f] to-black border-t border-white/5">
          <div className="max-w-3xl mx-auto px-6 text-center">
             <h2 className="text-3xl font-bold font-display text-white mb-8">Vamos trabalhar juntos?</h2>
             <form className="space-y-4 text-left glass-panel p-8 rounded-2xl">
@@ -214,9 +214,9 @@ const Home: React.FC = () => {
 };
 
 const FundamentalCard: React.FC<{ icon: React.ReactNode; title: string; text: string }> = ({ icon, title, text }) => (
-  <div className="group relative bg-white/[0.02] backdrop-blur-sm border border-white/5 rounded-2xl p-6 hover:bg-white/[0.05] hover:border-brand-500/30 transition-all duration-300">
+  <div className="group relative bg-[#18181d]/50 backdrop-blur-sm border border-white/10 rounded-2xl p-6 hover:bg-[#1a1a20]/70 hover:border-brand-500/30 transition-all duration-300">
     <div className="flex items-start gap-4 mb-4">
-      <div className="p-3 bg-dark-900/50 rounded-xl border border-white/5 group-hover:border-brand-500/20 group-hover:bg-dark-900/80 transition-all">
+      <div className="p-3 bg-[#0f0f14]/80 rounded-xl border border-white/10 group-hover:border-brand-500/20 group-hover:bg-[#0a0a0f] transition-all">
         {icon}
       </div>
       <h3 className="text-lg font-bold text-white mt-2">{title}</h3>
