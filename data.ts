@@ -65,7 +65,7 @@ export const PROJECTS: Project[] = [
     category: "Web App",
     company: "Personal Project",
     description: "Web App de um afinador de violão e guitarra.",
-    coverImage: "https://i.imgur.com/NnPnELw.png",
+    coverImage: "https://i.imgur.com/jyETOq9.png",
     context: "Aplicação web desenvolvida em Python com interface front-end interativa, projetada para auxiliar na afinação precisa do violão em tempo real. O sistema capta o áudio, identifica a frequência das cordas e fornece feedback visual claro e intuitivo, permitindo ajustes rápidos e precisos. A solução combina processamento de sinais no backend com uma experiência de uso simples e responsiva no front-end.",
     tools: ["Python", "React", "Tailwind CSS"],
     images: [
