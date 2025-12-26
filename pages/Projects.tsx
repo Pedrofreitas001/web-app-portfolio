@@ -8,7 +8,7 @@ const Projects: React.FC = () => {
   const projects = PROJECTS;
 
   return (
-    <div className="min-h-screen bg-dark-950 pt-32 pb-24 relative">
+    <div className="min-h-screen bg-gradient-to-b from-black via-[#030308] to-black pt-32 pb-24 relative">
       <StarBackground />
 
       <div className="max-w-7xl mx-auto px-6 relative z-10">

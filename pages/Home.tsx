@@ -133,19 +133,6 @@ const Home: React.FC = () => {
             </div>
           </div>
         </div>
-
-        {/* Full Width Tools Marquee */}
-        <div className="w-full border-y border-white/5 bg-black/50 backdrop-blur-sm py-6 mt-12">
-            <div className="relative flex overflow-hidden">
-              <div className="animate-scroll flex gap-12 whitespace-nowrap min-w-full">
-                {[...TOOLS, ...TOOLS, ...TOOLS].map((tool, i) => (
-                  <span key={i} className="text-lg font-semibold text-slate-500 flex items-center gap-3 hover:text-brand-400 transition-colors">
-                      <span className="w-1.5 h-1.5 rounded-full bg-brand-500/70"></span> {tool}
-                  </span>
-                ))}
-              </div>
-            </div>
-        </div>
       </section>
 
       {/* 3. FUNDAMENTALS SECTION */}
@@ -181,6 +168,19 @@ const Home: React.FC = () => {
               text="Soluções robustas com código limpo e documentação clara."
             />
           </div>
+        </div>
+
+        {/* Full Width Tools Marquee */}
+        <div className="w-full border-y border-white/5 bg-black/50 backdrop-blur-sm py-6 mt-12">
+            <div className="relative flex overflow-hidden">
+              <div className="animate-scroll flex gap-12 whitespace-nowrap min-w-full">
+                {[...TOOLS, ...TOOLS, ...TOOLS].map((tool, i) => (
+                  <span key={i} className="text-lg font-semibold text-slate-500 flex items-center gap-3 hover:text-brand-400 transition-colors">
+                      <span className="w-1.5 h-1.5 rounded-full bg-brand-500/70"></span> {tool}
+                  </span>
+                ))}
+              </div>
+            </div>
         </div>
       </section>
 
