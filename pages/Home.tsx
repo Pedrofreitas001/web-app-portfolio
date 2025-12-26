@@ -214,8 +214,8 @@ const Home: React.FC = () => {
 };
 
 const FundamentalCard: React.FC<{ icon: React.ReactNode; title: string; text: string }> = ({ icon, title, text }) => (
-  <div className="group relative bg-[#18181d]/50 backdrop-blur-sm border border-white/10 rounded-2xl p-6 hover:bg-[#1a1a20]/70 hover:border-brand-500/30 transition-all duration-300">
-    <div className="flex items-start gap-4 mb-4">
+  <div className="group relative bg-[#18181d]/50 backdrop-blur-sm border border-white/10 rounded-2xl p-8 min-h-[240px] flex flex-col hover:bg-[#1a1a20]/70 hover:border-brand-500/30 transition-all duration-300">
+    <div className="flex items-start gap-4 mb-6">
       <div className="p-3 bg-[#0f0f14]/80 rounded-xl border border-white/10 group-hover:border-brand-500/20 group-hover:bg-[#0a0a0f] transition-all">
         {icon}
       </div>
