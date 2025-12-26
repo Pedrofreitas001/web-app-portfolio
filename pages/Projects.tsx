@@ -40,10 +40,10 @@ const Projects: React.FC = () => {
               {/* Image Container */}
               <div className="relative h-56 overflow-hidden">
                 <div className="absolute inset-0 bg-dark-950/20 group-hover:bg-transparent transition-colors z-10"></div>
-                <img 
-                  src={project.coverImage} 
-                  alt={project.title} 
-                  className="w-full h-full object-cover transform group-hover:scale-110 transition-transform duration-700"
+                <img
+                  src={project.coverImage}
+                  alt={project.title}
+                  className="w-full h-full object-cover transition-opacity duration-300"
                 />
                 <div className="absolute top-4 right-4 z-20 bg-dark-950/80 backdrop-blur px-3 py-1 rounded-full text-xs font-bold text-white border border-white/10">
                   {project.category}
