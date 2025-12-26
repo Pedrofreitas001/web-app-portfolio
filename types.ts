@@ -12,6 +12,7 @@ export interface Project {
   images: string[];
   repoLink?: string;
   liveLink?: string;
+  downloadableFiles?: Array<{ name: string; url: string }>;
   featured: boolean;
 }
 
