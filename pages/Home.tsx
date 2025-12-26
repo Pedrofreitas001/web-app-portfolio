@@ -54,59 +54,45 @@ const Home: React.FC = () => {
       {/* 2. ABOUT ME SECTION */}
       <section className="py-24 bg-[#0B0D14] relative overflow-hidden border-t border-white/5">
         <div className="max-w-6xl mx-auto px-6 mb-20">
-          <div className="grid md:grid-cols-12 gap-12 items-center">
-            
-            {/* Left: Image (Span 5 cols) */}
-            <div className="md:col-span-5 relative group mx-auto md:mx-0">
-               <div className="absolute inset-0 bg-gradient-to-tr from-brand-600 to-purple-600 rounded-2xl blur-xl opacity-30 group-hover:opacity-50 transition-opacity duration-500"></div>
-               <div className="relative w-full aspect-square md:aspect-[4/5] rounded-2xl overflow-hidden border border-white/10 shadow-2xl">
-                 <img
-                   src="https://i.imgur.com/XUSFsuD.png"
-                   alt="Pedro Freitas"
-                   className="w-full h-full object-cover filter brightness-110 contrast-110"
-                 />
-                 {/* Overlay Gradient on Image */}
-                 <div className="absolute inset-0 bg-gradient-to-t from-dark-950/80 via-transparent to-transparent"></div>
-                 
-                 <div className="absolute bottom-6 left-6 text-white">
-                    <p className="text-xs font-mono text-brand-400 mb-1">Oceanógrafo & Data Engineer</p>
-                    <h3 className="text-2xl font-bold font-display">Pedro Freitas</h3>
-                 </div>
-               </div>
-            </div>
+          <div className="grid md:grid-cols-12 gap-8 items-start">
 
-            {/* Right: Content (Span 7 cols) */}
-            <div className="md:col-span-7">
+            {/* Left: Content (Span 8 cols) */}
+            <div className="md:col-span-8 order-2 md:order-1">
               <div className="bg-white/5 border border-white/10 backdrop-blur-sm p-8 md:p-10 rounded-3xl relative overflow-hidden">
                 {/* Decoration */}
                 <div className="absolute top-0 right-0 w-32 h-32 bg-brand-500/10 rounded-full blur-3xl pointer-events-none"></div>
 
-                <h2 className="text-3xl md:text-4xl font-bold font-display text-white mb-6 leading-tight">
-                  Da complexidade dos oceanos <br/>
-                  <span className="text-transparent bg-clip-text bg-gradient-to-r from-brand-400 to-purple-400">à precisão dos dados.</span>
-                </h2>
-                
-                <div className="space-y-4 text-slate-300 leading-relaxed text-lg">
+                <div className="mb-6">
+                  <span className="inline-block px-3 py-1 rounded-full bg-brand-500/10 border border-brand-500/20 text-brand-300 text-xs font-semibold uppercase tracking-wider mb-4">
+                    Sobre Mim
+                  </span>
+                  <h2 className="text-3xl md:text-4xl font-bold font-display text-white leading-tight">
+                    Da complexidade dos oceanos <br/>
+                    <span className="text-transparent bg-clip-text bg-gradient-to-r from-brand-400 to-purple-400">à precisão dos dados.</span>
+                  </h2>
+                </div>
+
+                <div className="space-y-4 text-slate-300 leading-relaxed">
                   <p>
                     Oceanógrafo pela Universidade de São Paulo (USP), com cerca de dois anos de experiência em análise e engenharia de dados.
                     Atuou em projetos de consultoria nas áreas de engenharia, meio ambiente e energia, com foco no desenvolvimento de pipelines de dados,
                     fluxos de automação e dashboards interativos em Power BI.
                   </p>
                   <p>
-                    Possui experiência com <span className="text-brand-300">Python, SQL, DAX, M, Power Automate e Microsoft Fabric</span>.
+                    Possui experiência com <span className="text-brand-300 font-medium">Python, SQL, DAX, M, Power Automate e Microsoft Fabric</span>.
                     Interessado em inteligência artificial e em soluções tecnológicas voltadas à inovação e à eficiência de processos.
                   </p>
                 </div>
 
                 {/* Mini Stats Grid */}
-                <div className="grid grid-cols-1 sm:grid-cols-2 gap-4 mt-8 pt-8 border-t border-white/5">
+                <div className="grid grid-cols-2 gap-4 mt-8 pt-8 border-t border-white/5">
                    <div className="flex items-start gap-3">
                       <div className="p-2 bg-brand-900/30 rounded-lg text-brand-400 mt-1">
                         <GraduationCap size={20} />
                       </div>
                       <div>
                         <h4 className="text-white font-bold text-sm">Formação Sólida</h4>
-                        <p className="text-slate-400 text-xs mt-1">Oceanografia USP: Capacidade analítica.</p>
+                        <p className="text-slate-400 text-xs mt-1">Oceanografia USP</p>
                       </div>
                    </div>
                    <div className="flex items-start gap-3">
@@ -114,8 +100,8 @@ const Home: React.FC = () => {
                         <Clock size={20} />
                       </div>
                       <div>
-                        <h4 className="text-white font-bold text-sm">+2 Anos de XP</h4>
-                        <p className="text-slate-400 text-xs mt-1">Automação, ETL e Dashboards.</p>
+                        <h4 className="text-white font-bold text-sm">+2 Anos</h4>
+                        <p className="text-slate-400 text-xs mt-1">Data Engineering</p>
                       </div>
                    </div>
                 </div>
@@ -125,10 +111,29 @@ const Home: React.FC = () => {
                     Entrar em Contato
                   </a>
                   <Link to="/projects" className="px-8 py-3 bg-brand-600/10 border border-brand-500/20 text-brand-300 font-bold rounded-lg hover:bg-brand-600/20 transition-colors text-center flex items-center justify-center gap-2 group">
-                    Explorar Projetos <ArrowRight size={18} className="group-hover:translate-x-1 transition-transform"/>
+                    Ver Projetos <ArrowRight size={18} className="group-hover:translate-x-1 transition-transform"/>
                   </Link>
                 </div>
               </div>
+            </div>
+
+            {/* Right: Image (Span 4 cols) - Circular Small */}
+            <div className="md:col-span-4 order-1 md:order-2 flex flex-col items-center justify-start pt-0 md:pt-10">
+               <div className="relative group">
+                 <div className="absolute inset-0 bg-gradient-to-tr from-brand-600 to-purple-600 rounded-full blur-2xl opacity-30 group-hover:opacity-50 transition-opacity duration-500"></div>
+                 <div className="relative w-48 h-48 md:w-56 md:h-56 rounded-full overflow-hidden border-4 border-white/10 shadow-2xl">
+                   <img
+                     src="https://i.imgur.com/XUSFsuD.png"
+                     alt="Pedro Freitas"
+                     className="w-full h-full object-cover filter brightness-105"
+                   />
+                 </div>
+               </div>
+
+               <div className="text-center mt-6">
+                 <h3 className="text-2xl font-bold font-display text-white">Pedro Freitas</h3>
+                 <p className="text-sm font-mono text-brand-400 mt-1">Oceanógrafo & Data Engineer</p>
+               </div>
             </div>
           </div>
         </div>
