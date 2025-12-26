@@ -1,7 +1,7 @@
 import { Project } from './types';
 
 export const TOOLS = [
-  "Power BI", "Python", "JavaScript", "SQL", "TypeScript", "HTML", "Microsoft Fabric", "Lovable", "Streamlit", "Pandas", "React"
+  "Power BI", "Python", "JavaScript", "SQL", "TypeScript", "HTML", "Microsoft Fabric", "Lovable", "Streamlit", "Pandas", "React", "DAX", "M Language", "Next.js", "Tailwind CSS"
 ];
 
 export const PROJECTS: Project[] = [
@@ -11,15 +11,16 @@ export const PROJECTS: Project[] = [
     title: "Dashboard Ifood",
     category: "Dashboard Power BI",
     company: "Ifood",
-    description: "Análise de performance logística e distribuição de pedidos em tempo real.",
-    coverImage: "https://picsum.photos/id/48/800/600",
-    context: "Extração de dados de restaurantes usando API do Ifood e dados geoespaciais para entender o comportamento de pedidos em diferentes regiões. O objetivo principal foi identificar gargalos na entrega e oportunidades de expansão para parceiros logísticos.",
+    description: "Análise completa de dados de restaurantes do iFood com visualizações interativas.",
+    coverImage: "https://i.imgur.com/RIblcRC.png",
+    context: "Ao estudar os pedidos no site do Ifood, percebi que seria possível extrair informações de todos os restaurantes usando a API do Ifood e alguns dados geoespaciais. O conjunto de dados contém informações sobre todos os restaurantes no iFood em fevereiro de 2021 e novembro de 2020. Os dados incluem nomes dos restaurantes, logotipos, categorias, taxas, localizações, faixa de preços e mais.",
     dataset: "Informações de fevereiro 2021 e novembro 2020 (nomes, logos, categorias, taxas, localizações, faixa de preços). Dados tratados para garantir anonimização de clientes sensíveis.",
-    tools: ["Power BI", "Python", "Microsoft Fabric", "DAX"],
+    tools: ["DAX", "M Language", "Power BI", "Microsoft Fabric"],
     images: [
-      "https://picsum.photos/id/48/1200/800",
-      "https://picsum.photos/id/20/1200/800",
-      "https://picsum.photos/id/1/1200/800"
+      "https://i.imgur.com/VL9XCVG.png",
+      "https://i.imgur.com/5s6QlvV.png",
+      "https://i.imgur.com/tH8Pj3C.png",
+      "https://i.imgur.com/FsgvUdl.png"
     ],
     featured: true
   },
@@ -61,24 +62,28 @@ export const PROJECTS: Project[] = [
     context: "Dashboard financeiro interativo desenvolvido em Python com Streamlit, voltado ao fechamento contábil, com interface moderna customizada via código e CSS. A solução centraliza indicadores financeiros, oferece filtros dinâmicos, upload de dados via Excel, exportação de relatórios em PDF e controle de acesso, entregando uma visão executiva clara, segura e independente de ferramentas proprietárias.",
     tools: ["Python", "Pandas", "Streamlit", "Google AI Studio"],
     images: [
-      "https://i.imgur.com/cZ2A2E2.png",
-      "https://i.imgur.com/W1upNX5.png",
-      "https://i.imgur.com/NMlAdUT.png"
+      "https://i.imgur.com/w6wvRNS.png",
+      "https://i.imgur.com/P1aNapK.png"
     ],
     featured: true
   },
   {
     id: "5",
     slug: "site-farol-dev",
-    title: "Website Institucional",
+    title: "Site Farol Dev",
     category: "Site",
     company: "Farol Dev",
-    description: "Landing page de alta conversão para agência de desenvolvimento.",
-    coverImage: "https://picsum.photos/id/370/800/600",
-    context: "Criação da presença digital da Farol Dev, focando em SEO e performance (Core Web Vitals).",
-    tools: ["React", "Tailwind CSS", "Vite"],
-    images: ["https://picsum.photos/id/370/1200/800"],
-    featured: false
+    description: "Website institucional moderno e escalável.",
+    coverImage: "https://i.imgur.com/4Bp4bxd.png",
+    context: "Website institucional desenvolvido para a Farol Dev, com foco em apresentar a empresa, seus serviços e sua proposta de valor de forma clara, moderna e estratégica. A arquitetura do front-end foi pensada para escalabilidade, fácil manutenção e rápida implantação, com integração a fluxos de deploy contínuo em plataformas como Vercel, garantindo eficiência e confiabilidade em ambiente produtivo. O projeto foi construído com Next.js, React e Tailwind CSS, adotando princípios de UI/UX moderno, alta performance, responsividade e animações sutis para elevar a experiência do usuário.",
+    tools: ["Next.js", "React", "Tailwind CSS"],
+    images: [
+      "https://i.imgur.com/s2mSQcx.png",
+      "https://i.imgur.com/sc2LUqc.png",
+      "https://i.imgur.com/RbznGwO.png",
+      "https://i.imgur.com/l25IlpL.png"
+    ],
+    featured: true
   },
   {
     id: "6",
@@ -92,5 +97,22 @@ export const PROJECTS: Project[] = [
     tools: ["Next.js", "PostgreSQL", "Prisma", "Stripe"],
     images: ["https://picsum.photos/id/403/1200/800"],
     featured: false
+  },
+  {
+    id: "7",
+    slug: "afinador-pro",
+    title: "Afinador PRO",
+    category: "Web App",
+    company: "Personal Project",
+    description: "Web App de um afinador de violão e guitarra.",
+    coverImage: "https://i.imgur.com/NnPnELw.png",
+    context: "Aplicação web desenvolvida em Python com interface front-end interativa, projetada para auxiliar na afinação precisa do violão em tempo real. O sistema capta o áudio, identifica a frequência das cordas e fornece feedback visual claro e intuitivo, permitindo ajustes rápidos e precisos. A solução combina processamento de sinais no backend com uma experiência de uso simples e responsiva no front-end.",
+    tools: ["Python", "React", "Tailwind CSS"],
+    images: [
+      "https://i.imgur.com/aLETIjq.png",
+      "https://i.imgur.com/AGRJaS4.png",
+      "https://i.imgur.com/i42clg4.png"
+    ],
+    featured: true
   }
 ];
