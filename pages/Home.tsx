@@ -1,0 +1,215 @@
+import React from 'react';
+import { Link } from 'react-router-dom';
+import { ArrowRight, Database, Code2, LineChart, FileText, GraduationCap, Clock } from 'lucide-react';
+import StarBackground from '../components/StarBackground';
+import { TOOLS } from '../data';
+
+const Home: React.FC = () => {
+  return (
+    <div className="relative">
+      {/* 1. HERO SECTION */}
+      <section className="relative min-h-screen flex items-center justify-center pt-20 overflow-hidden bg-gradient-to-b from-dark-950 via-[#0f1025] to-dark-950">
+        <StarBackground />
+        
+        {/* Decorative Glows */}
+        <div className="absolute top-1/3 left-1/2 -translate-x-1/2 w-[600px] h-[600px] bg-brand-600/10 rounded-full blur-[120px] pointer-events-none"></div>
+        <div className="absolute bottom-0 right-0 w-[400px] h-[400px] bg-purple-900/10 rounded-full blur-[100px] pointer-events-none"></div>
+
+        <div className="relative z-10 max-w-4xl px-6 text-center">
+          <div className="inline-block mb-6 px-4 py-1.5 rounded-full border border-brand-500/30 bg-brand-900/10 backdrop-blur-sm">
+             <span className="text-brand-300 text-xs font-semibold tracking-wider uppercase">Data Engineering & Analytics</span>
+          </div>
+          
+          <h1 className="text-5xl md:text-7xl font-bold font-display text-white mb-6 leading-tight tracking-tight">
+            Portfólio de <span className="text-transparent bg-clip-text bg-gradient-to-r from-brand-400 to-purple-400">projetos</span>
+          </h1>
+          
+          <p className="text-xl md:text-2xl text-slate-400 font-light italic mb-10 max-w-2xl mx-auto">
+            Dashboards, automações e soluções digitais.
+          </p>
+
+          <div className="flex flex-col sm:flex-row items-center justify-center gap-4">
+            {/* Botão Azul para Projetos */}
+            <Link 
+              to="/projects"
+              className="group relative px-8 py-4 bg-brand-600 rounded-lg font-bold text-white shadow-[0_0_20px_rgba(14,165,233,0.3)] hover:shadow-[0_0_30px_rgba(14,165,233,0.5)] transition-all hover:-translate-y-1 overflow-hidden"
+            >
+              <div className="absolute inset-0 bg-gradient-to-r from-transparent via-white/20 to-transparent translate-x-[-100%] group-hover:animate-[shimmer_1s_infinite]"></div>
+              <span className="relative flex items-center gap-2">
+                Ver Projetos <ArrowRight size={20} />
+              </span>
+            </Link>
+            
+            {/* Botão de Contato */}
+            <a 
+              href="#contact"
+              className="px-8 py-4 bg-transparent border border-white/10 rounded-lg font-bold text-white hover:bg-white/5 transition-all"
+            >
+              Entrar em Contato
+            </a>
+          </div>
+        </div>
+      </section>
+
+      {/* 2. ABOUT ME SECTION */}
+      <section className="py-24 bg-[#0B0D14] relative overflow-hidden border-t border-white/5">
+        <div className="max-w-6xl mx-auto px-6 mb-20">
+          <div className="grid md:grid-cols-12 gap-12 items-center">
+            
+            {/* Left: Image (Span 5 cols) */}
+            <div className="md:col-span-5 relative group mx-auto md:mx-0">
+               <div className="absolute inset-0 bg-gradient-to-tr from-brand-600 to-purple-600 rounded-2xl blur-xl opacity-30 group-hover:opacity-50 transition-opacity duration-500"></div>
+               <div className="relative w-full aspect-square md:aspect-[4/5] rounded-2xl overflow-hidden border border-white/10 shadow-2xl">
+                 <img 
+                   src="https://picsum.photos/id/1005/800/800" 
+                   alt="Pedro Freitas" 
+                   className="w-full h-full object-cover filter brightness-110 contrast-110"
+                 />
+                 {/* Overlay Gradient on Image */}
+                 <div className="absolute inset-0 bg-gradient-to-t from-dark-950/80 via-transparent to-transparent"></div>
+                 
+                 <div className="absolute bottom-6 left-6 text-white">
+                    <p className="text-xs font-mono text-brand-400 mb-1">Oceanógrafo & Data Engineer</p>
+                    <h3 className="text-2xl font-bold font-display">Pedro Freitas</h3>
+                 </div>
+               </div>
+            </div>
+
+            {/* Right: Content (Span 7 cols) */}
+            <div className="md:col-span-7">
+              <div className="bg-white/5 border border-white/10 backdrop-blur-sm p-8 md:p-10 rounded-3xl relative overflow-hidden">
+                {/* Decoration */}
+                <div className="absolute top-0 right-0 w-32 h-32 bg-brand-500/10 rounded-full blur-3xl pointer-events-none"></div>
+
+                <h2 className="text-3xl md:text-4xl font-bold font-display text-white mb-6 leading-tight">
+                  Da complexidade dos oceanos <br/>
+                  <span className="text-transparent bg-clip-text bg-gradient-to-r from-brand-400 to-purple-400">à precisão dos dados.</span>
+                </h2>
+                
+                <div className="space-y-4 text-slate-300 leading-relaxed text-lg">
+                  <p>
+                    Minha trajetória começou na USP, onde aprendi a modelar sistemas complexos como Oceanógrafo. Hoje, trago esse 
+                    <strong className="text-white font-medium"> rigor analítico e científico</strong> para a Engenharia de Dados.
+                  </p>
+                  <p>
+                    Não apenas construo pipelines; eu transformo dados brutos em narrativas estratégicas. Com expertise em 
+                    <span className="text-brand-300"> Python, SQL e Power BI</span>, desenvolvo soluções que conectam a técnica à tomada de decisão de negócio.
+                  </p>
+                </div>
+
+                {/* Mini Stats Grid */}
+                <div className="grid grid-cols-1 sm:grid-cols-2 gap-4 mt-8 pt-8 border-t border-white/5">
+                   <div className="flex items-start gap-3">
+                      <div className="p-2 bg-brand-900/30 rounded-lg text-brand-400 mt-1">
+                        <GraduationCap size={20} />
+                      </div>
+                      <div>
+                        <h4 className="text-white font-bold text-sm">Formação Sólida</h4>
+                        <p className="text-slate-400 text-xs mt-1">Oceanografia USP: Capacidade analítica.</p>
+                      </div>
+                   </div>
+                   <div className="flex items-start gap-3">
+                      <div className="p-2 bg-purple-900/30 rounded-lg text-purple-400 mt-1">
+                        <Clock size={20} />
+                      </div>
+                      <div>
+                        <h4 className="text-white font-bold text-sm">+2 Anos de XP</h4>
+                        <p className="text-slate-400 text-xs mt-1">Automação, ETL e Dashboards.</p>
+                      </div>
+                   </div>
+                </div>
+
+                <div className="flex flex-col sm:flex-row gap-4 mt-10">
+                  <a href="#contact" className="px-8 py-3 bg-white text-dark-950 font-bold rounded-lg hover:bg-slate-200 transition-colors text-center shadow-lg shadow-white/5">
+                    Entrar em Contato
+                  </a>
+                  <Link to="/projects" className="px-8 py-3 bg-brand-600/10 border border-brand-500/20 text-brand-300 font-bold rounded-lg hover:bg-brand-600/20 transition-colors text-center flex items-center justify-center gap-2 group">
+                    Explorar Projetos <ArrowRight size={18} className="group-hover:translate-x-1 transition-transform"/>
+                  </Link>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        {/* Full Width Tools Marquee */}
+        <div className="w-full border-y border-white/5 bg-white/5 backdrop-blur-sm py-10">
+            <div className="relative flex overflow-hidden">
+              <div className="animate-scroll flex gap-16 whitespace-nowrap min-w-full">
+                {[...TOOLS, ...TOOLS, ...TOOLS].map((tool, i) => (
+                  <span key={i} className="text-2xl font-bold text-slate-400 flex items-center gap-4 hover:text-white transition-colors">
+                      <span className="w-2 h-2 rounded-full bg-brand-500 shadow-[0_0_10px_rgba(14,165,233,0.5)]"></span> {tool}
+                  </span>
+                ))}
+              </div>
+            </div>
+        </div>
+      </section>
+
+      {/* 3. FUNDAMENTALS SECTION */}
+      <section className="py-24 bg-[#0a0c16]">
+        <div className="max-w-7xl mx-auto px-6">
+          <h2 className="text-3xl md:text-4xl font-bold font-display text-white mb-16 text-center">
+            Fundamentos em Data Solutions
+          </h2>
+
+          <div className="grid md:grid-cols-3 gap-8">
+            <FundamentalCard 
+              icon={<LineChart size={32} className="text-purple-400" />}
+              title="Tomada de decisão orientada a dados"
+              text="Utilizo dados como base para análise e planejamento, transformando números brutos em insights estratégicos para o negócio."
+            />
+            <FundamentalCard 
+              icon={<Code2 size={32} className="text-brand-400" />}
+              title="Automação & Produtividade"
+              text="Elimino tarefas repetitivas e manuais através de scripts e pipelines inteligentes, liberando tempo para análises de alto valor."
+            />
+            <FundamentalCard 
+              icon={<FileText size={32} className="text-emerald-400" />}
+              title="Documentação & Escalabilidade"
+              text="Construo soluções pensadas para crescer. Código limpo, pipelines robustos e documentação clara para garantir manutenibilidade."
+            />
+          </div>
+        </div>
+      </section>
+
+      {/* Contact Section Placeholder */}
+      <section id="contact" className="py-24 bg-dark-950 border-t border-white/5">
+         <div className="max-w-3xl mx-auto px-6 text-center">
+            <h2 className="text-3xl font-bold font-display text-white mb-8">Vamos trabalhar juntos?</h2>
+            <form className="space-y-4 text-left glass-panel p-8 rounded-2xl">
+              <div className="grid md:grid-cols-2 gap-4">
+                <div className="space-y-2">
+                  <label className="text-sm text-slate-400">Nome</label>
+                  <input type="text" className="w-full bg-dark-900 border border-white/10 rounded-lg p-3 text-white focus:ring-2 focus:ring-brand-500 outline-none" placeholder="Seu nome" />
+                </div>
+                <div className="space-y-2">
+                  <label className="text-sm text-slate-400">Email</label>
+                  <input type="email" className="w-full bg-dark-900 border border-white/10 rounded-lg p-3 text-white focus:ring-2 focus:ring-brand-500 outline-none" placeholder="seu@email.com" />
+                </div>
+              </div>
+              <div className="space-y-2">
+                <label className="text-sm text-slate-400">Mensagem</label>
+                <textarea rows={4} className="w-full bg-dark-900 border border-white/10 rounded-lg p-3 text-white focus:ring-2 focus:ring-brand-500 outline-none" placeholder="Como posso ajudar?"></textarea>
+              </div>
+              <button className="w-full py-4 bg-brand-600 text-white font-bold rounded-lg hover:bg-brand-500 transition-colors">
+                Enviar Mensagem
+              </button>
+            </form>
+         </div>
+      </section>
+    </div>
+  );
+};
+
+const FundamentalCard: React.FC<{ icon: React.ReactNode; title: string; text: string }> = ({ icon, title, text }) => (
+  <div className="glass-panel p-8 rounded-2xl hover:bg-white/5 transition-all duration-300 hover:-translate-y-2 group">
+    <div className="mb-6 p-4 bg-dark-900 rounded-xl inline-block border border-white/5 group-hover:border-brand-500/30 transition-colors">
+      {icon}
+    </div>
+    <h3 className="text-xl font-bold text-white mb-4">{title}</h3>
+    <p className="text-slate-400 leading-relaxed">{text}</p>
+  </div>
+);
+
+export default Home;
