@@ -57,13 +57,13 @@ export const PROJECTS: Project[] = [
     category: "Web App",
     company: "Startup FinTech",
     description: "Dashboard interativo para análise de dados financeiros consolidados (DRE).",
-    coverImage: "https://picsum.photos/id/201/800/600", // SUBSTITUIR: Envie URL da capa
+    coverImage: "/images/projects/relatorio-financeiro/capa.png",
     context: "Dashboard financeiro interativo desenvolvido em Python com Streamlit, voltado ao fechamento contábil, com interface moderna customizada via código e CSS. A solução centraliza indicadores financeiros, oferece filtros dinâmicos, upload de dados via Excel, exportação de relatórios em PDF e controle de acesso, entregando uma visão executiva clara, segura e independente de ferramentas proprietárias.",
     tools: ["Python", "Pandas", "Streamlit", "Google AI Studio"],
     images: [
-      "https://picsum.photos/id/201/1200/800", // SUBSTITUIR: Galeria imagem 1
-      "https://picsum.photos/id/445/1200/800", // SUBSTITUIR: Galeria imagem 2
-      "https://picsum.photos/id/180/1200/800"  // SUBSTITUIR: Galeria imagem 3
+      "/images/projects/relatorio-financeiro/dashboard-gerenciais.png",
+      "/images/projects/relatorio-financeiro/composicao-dre.png",
+      "/images/projects/relatorio-financeiro/visao-executiva.png"
     ],
     featured: true
   },
