@@ -52,15 +52,19 @@ export const PROJECTS: Project[] = [
   },
   {
     id: "4",
-    slug: "streamlit-relatorio",
+    slug: "relatorio-financeiro-consolidado",
     title: "Relatório Financeiro Consolidado",
-    category: "Aplicação Streamlit",
-    company: "Mbastos",
-    description: "Web app interativo para stakeholders visualizarem resultados mensais.",
-    coverImage: "https://picsum.photos/id/201/800/600",
-    context: "Necessidade de democratizar o acesso aos dados financeiros sem enviar planilhas por e-mail. O Streamlit foi escolhido pela rapidez de desenvolvimento e fácil integração com o Data Warehouse.",
-    tools: ["Streamlit", "Python", "SQL", "Plotly"],
-    images: ["https://picsum.photos/id/201/1200/800", "https://picsum.photos/id/445/1200/800"],
+    category: "Web App",
+    company: "Startup FinTech",
+    description: "Dashboard interativo para análise de dados financeiros consolidados (DRE).",
+    coverImage: "https://picsum.photos/id/201/800/600", // SUBSTITUIR: Envie URL da capa
+    context: "Dashboard financeiro interativo desenvolvido em Python com Streamlit, voltado ao fechamento contábil, com interface moderna customizada via código e CSS. A solução centraliza indicadores financeiros, oferece filtros dinâmicos, upload de dados via Excel, exportação de relatórios em PDF e controle de acesso, entregando uma visão executiva clara, segura e independente de ferramentas proprietárias.",
+    tools: ["Python", "Pandas", "Streamlit", "Google AI Studio"],
+    images: [
+      "https://picsum.photos/id/201/1200/800", // SUBSTITUIR: Galeria imagem 1
+      "https://picsum.photos/id/445/1200/800", // SUBSTITUIR: Galeria imagem 2
+      "https://picsum.photos/id/180/1200/800"  // SUBSTITUIR: Galeria imagem 3
+    ],
     featured: true
   },
   {
