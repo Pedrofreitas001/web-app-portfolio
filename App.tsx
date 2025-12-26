@@ -5,21 +5,34 @@ import Footer from './components/Footer';
 import Home from './pages/Home';
 import Projects from './pages/Projects';
 import ProjectDetail from './pages/ProjectDetail';
+import Login from './pages/admin/Login';
+import Admin from './pages/admin/Admin';
+import ProjectForm from './pages/admin/ProjectForm';
 
 const App: React.FC = () => {
   return (
     <Router>
-      <div className="flex flex-col min-h-screen">
-        <Navbar />
-        <main className="flex-grow">
-          <Routes>
-            <Route path="/" element={<Home />} />
-            <Route path="/projects" element={<Projects />} />
-            <Route path="/project/:slug" element={<ProjectDetail />} />
-          </Routes>
-        </main>
-        <Footer />
-      </div>
+      <Routes>
+        {/* Admin routes without Navbar/Footer */}
+        <Route path="/admin/login" element={<Login />} />
+        <Route path="/admin" element={<Admin />} />
+        <Route path="/admin/project/:id" element={<ProjectForm />} />
+
+        {/* Public routes with Navbar/Footer */}
+        <Route path="/*" element={
+          <div className="flex flex-col min-h-screen">
+            <Navbar />
+            <main className="flex-grow">
+              <Routes>
+                <Route path="/" element={<Home />} />
+                <Route path="/projects" element={<Projects />} />
+                <Route path="/project/:slug" element={<ProjectDetail />} />
+              </Routes>
+            </main>
+            <Footer />
+          </div>
+        } />
+      </Routes>
     </Router>
   );
 };

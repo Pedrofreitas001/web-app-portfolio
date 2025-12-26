@@ -1,14 +1,57 @@
-import React from 'react';
+import React, { useState, useEffect } from 'react';
 import { Link } from 'react-router-dom';
 import { ArrowUpRight, Filter } from 'lucide-react';
-import { PROJECTS } from '../data';
+import { supabase } from '../lib/supabase';
+import { Project } from '../types';
 import StarBackground from '../components/StarBackground';
 
 const Projects: React.FC = () => {
+  const [projects, setProjects] = useState<Project[]>([]);
+  const [loading, setLoading] = useState(true);
+
+  useEffect(() => {
+    loadProjects();
+  }, []);
+
+  const loadProjects = async () => {
+    try {
+      const { data, error } = await supabase
+        .from('projects')
+        .select('*')
+        .order('created_at', { ascending: false });
+
+      if (error) throw error;
+
+      // Map database fields to Project interface
+      const mappedProjects: Project[] = (data || []).map((p: any) => ({
+        id: p.id,
+        slug: p.slug,
+        title: p.title,
+        category: p.category,
+        company: p.company,
+        description: p.description,
+        coverImage: p.cover_image,
+        context: p.context,
+        dataset: p.dataset,
+        tools: p.tools || [],
+        images: p.images || [],
+        repoLink: p.repo_link,
+        liveLink: p.live_link,
+        featured: p.featured,
+      }));
+
+      setProjects(mappedProjects);
+    } catch (error) {
+      console.error('Error loading projects:', error);
+    } finally {
+      setLoading(false);
+    }
+  };
+
   return (
     <div className="min-h-screen bg-dark-950 pt-32 pb-24 relative">
       <StarBackground />
-      
+
       <div className="max-w-7xl mx-auto px-6 relative z-10">
         <div className="mb-16">
           <h1 className="text-4xl md:text-6xl font-bold font-display text-white mb-4">
@@ -27,9 +70,23 @@ const Projects: React.FC = () => {
             <button className="px-4 py-2 rounded-full bg-dark-900 border border-white/10 text-slate-300 text-sm font-medium hover:bg-dark-800 transition-colors">Web Dev</button>
         </div>
 
+        {/* Loading State */}
+        {loading && (
+          <div className="text-center py-12">
+            <p className="text-slate-400">Carregando projetos...</p>
+          </div>
+        )}
+
+        {/* Empty State */}
+        {!loading && projects.length === 0 && (
+          <div className="text-center py-12">
+            <p className="text-slate-400">Nenhum projeto encontrado.</p>
+          </div>
+        )}
+
         {/* Projects Grid */}
         <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
-          {PROJECTS.map((project) => (
+          {projects.map((project) => (
             <Link 
               key={project.id} 
               to={`/project/${project.slug}`}

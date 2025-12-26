@@ -1,17 +1,63 @@
-import React, { useEffect } from 'react';
+import React, { useEffect, useState } from 'react';
 import { useParams, Link, useNavigate } from 'react-router-dom';
 import { ArrowLeft, ExternalLink, Github, Layers, Database, Wrench } from 'lucide-react';
-import { PROJECTS } from '../data';
+import { supabase } from '../lib/supabase';
+import { Project } from '../types';
 import StarBackground from '../components/StarBackground';
 
 const ProjectDetail: React.FC = () => {
   const { slug } = useParams<{ slug: string }>();
   const navigate = useNavigate();
-  const project = PROJECTS.find(p => p.slug === slug);
+  const [project, setProject] = useState<Project | null>(null);
+  const [loading, setLoading] = useState(true);
 
   useEffect(() => {
     window.scrollTo(0, 0);
+    loadProject();
   }, [slug]);
+
+  const loadProject = async () => {
+    try {
+      const { data, error } = await supabase
+        .from('projects')
+        .select('*')
+        .eq('slug', slug)
+        .single();
+
+      if (error) throw error;
+
+      if (data) {
+        setProject({
+          id: data.id,
+          slug: data.slug,
+          title: data.title,
+          category: data.category,
+          company: data.company,
+          description: data.description,
+          coverImage: data.cover_image,
+          context: data.context,
+          dataset: data.dataset,
+          tools: data.tools || [],
+          images: data.images || [],
+          repoLink: data.repo_link,
+          liveLink: data.live_link,
+          featured: data.featured,
+        });
+      }
+    } catch (error) {
+      console.error('Error loading project:', error);
+    } finally {
+      setLoading(false);
+    }
+  };
+
+  if (loading) {
+    return (
+      <div className="min-h-screen flex items-center justify-center bg-dark-950 text-white">
+        <p className="text-slate-400">Carregando...</p>
+      </div>
+    );
+  }
 
   if (!project) {
     return (
