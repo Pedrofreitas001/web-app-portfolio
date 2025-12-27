@@ -119,6 +119,24 @@ const ProjectDetail: React.FC = () => {
                 </section>
               )}
 
+              {/* Power BI Embed */}
+              {project.embedUrl && (
+                <section className="animate-fade-in-up" style={{ animationDelay: '0.25s' }}>
+                   <h2 className="text-2xl font-bold font-display text-white border-l-4 border-brand-500 pl-4 mb-6">Dashboard Interativo</h2>
+                   <div className="glass-panel p-4 rounded-2xl">
+                     <div className="relative w-full" style={{ paddingBottom: '59.77%' }}>
+                       <iframe
+                         title="Power BI Dashboard"
+                         src={project.embedUrl}
+                         className="absolute top-0 left-0 w-full h-full rounded-lg"
+                         frameBorder="0"
+                         allowFullScreen={true}
+                       />
+                     </div>
+                   </div>
+                </section>
+              )}
+
               {/* Gallery - Now in main column for larger images */}
               <section className="space-y-8 animate-fade-in-up" style={{ animationDelay: '0.3s' }}>
                 <h2 className="text-2xl font-bold font-display text-white border-l-4 border-brand-500 pl-4">Galeria do Projeto</h2>
