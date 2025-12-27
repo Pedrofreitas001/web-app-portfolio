@@ -22,6 +22,7 @@ export const PROJECTS: Project[] = [
       "https://i.imgur.com/tH8Pj3C.png",
       "https://i.imgur.com/FsgvUdl.png"
     ],
+    embedUrl: "https://app.powerbi.com/view?r=eyJrIjoiMTNkMDllNmMtYWY5My00ZDAyLTk4MGQtMDhiODhhNWRlZWNjIiwidCI6IjdlOTNlMjg2LWIyOWEtNDQ1NC1hNDFhLWU4NDE5ZWM5ZGViNSJ9&pageName=2c5103d0bbbaee24c701",
     featured: true
   },
   {

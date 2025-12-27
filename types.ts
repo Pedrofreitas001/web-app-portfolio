@@ -13,6 +13,7 @@ export interface Project {
   repoLink?: string;
   liveLink?: string;
   downloadableFiles?: Array<{ name: string; url: string }>;
+  embedUrl?: string;
   featured: boolean;
 }
 
