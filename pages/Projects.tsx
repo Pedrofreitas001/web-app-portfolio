@@ -11,13 +11,16 @@ const Projects: React.FC = () => {
     ? PROJECTS
     : PROJECTS.filter(project => {
         if (selectedFilter === 'Power BI') {
-          return project.tools.includes('Power BI') || project.tools.includes('DAX') || project.tools.includes('M Language');
+          return project.category.includes('Power BI');
+        }
+        if (selectedFilter === 'Web App') {
+          return project.category === 'Web App';
         }
         if (selectedFilter === 'Python') {
           return project.tools.includes('Python');
         }
-        if (selectedFilter === 'Web Dev') {
-          return project.tools.includes('React') || project.tools.includes('Next.js') || project.tools.includes('Tailwind CSS');
+        if (selectedFilter === 'Site') {
+          return project.category === 'Site';
         }
         return true;
       });
@@ -38,7 +41,7 @@ const Projects: React.FC = () => {
 
         {/* Filter Bar */}
         <div className="flex flex-wrap gap-4 mb-12">
-            {['Todos', 'Power BI', 'Python', 'Web Dev'].map(filter => (
+            {['Todos', 'Power BI', 'Web App', 'Python', 'Site'].map(filter => (
               <button
                 key={filter}
                 onClick={() => setSelectedFilter(filter)}
