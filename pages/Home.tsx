@@ -1,6 +1,6 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
-import { ArrowRight, Database, Code2, LineChart, FileText, GraduationCap, Clock, Linkedin } from 'lucide-react';
+import { ArrowRight, Database, Code2, LineChart, FileText, GraduationCap, Clock, Linkedin, Mail, Phone } from 'lucide-react';
 import StarBackground from '../components/StarBackground';
 import { TOOLS } from '../data';
 
@@ -192,29 +192,43 @@ const Home: React.FC = () => {
         </div>
       </section>
 
-      {/* Contact Section Placeholder */}
+      {/* Contact Section */}
       <section id="contact" className="py-24 bg-gradient-to-b from-[#0a0a0f] to-black border-t border-white/5">
-         <div className="max-w-3xl mx-auto px-6 text-center">
-            <h2 className="text-3xl font-bold font-display text-white mb-8">Vamos trabalhar juntos?</h2>
-            <form className="space-y-4 text-left glass-panel p-8 rounded-2xl">
-              <div className="grid md:grid-cols-2 gap-4">
-                <div className="space-y-2">
-                  <label className="text-sm text-slate-400">Nome</label>
-                  <input type="text" className="w-full bg-dark-900 border border-white/10 rounded-lg p-3 text-white focus:ring-2 focus:ring-brand-500 outline-none" placeholder="Seu nome" />
+         <div className="max-w-4xl mx-auto px-6">
+            <div className="text-center mb-12">
+              <h2 className="text-3xl md:text-4xl font-bold font-display text-white mb-4">
+                Vamos trabalhar juntos?
+              </h2>
+              <p className="text-slate-400 text-lg">Entre em contato para conversarmos sobre seu projeto</p>
+            </div>
+
+            <div className="grid md:grid-cols-2 gap-6">
+              {/* Email Card */}
+              <a
+                href="mailto:pedrofreitas@usp.br"
+                className="group glass-panel p-8 rounded-2xl hover:bg-[#1a1a20]/70 hover:border-brand-500/30 transition-all duration-300 flex flex-col items-center text-center"
+              >
+                <div className="p-4 bg-brand-600/20 rounded-xl mb-4 group-hover:bg-brand-600/30 transition-colors">
+                  <Mail size={32} className="text-brand-400" />
                 </div>
-                <div className="space-y-2">
-                  <label className="text-sm text-slate-400">Email</label>
-                  <input type="email" className="w-full bg-dark-900 border border-white/10 rounded-lg p-3 text-white focus:ring-2 focus:ring-brand-500 outline-none" placeholder="seu@email.com" />
+                <h3 className="text-lg font-bold text-white mb-2">Email</h3>
+                <p className="text-slate-400 text-sm">pedrofreitas@usp.br</p>
+              </a>
+
+              {/* WhatsApp Card */}
+              <a
+                href="https://wa.me/5511989476691"
+                target="_blank"
+                rel="noopener noreferrer"
+                className="group glass-panel p-8 rounded-2xl hover:bg-[#1a1a20]/70 hover:border-emerald-500/30 transition-all duration-300 flex flex-col items-center text-center"
+              >
+                <div className="p-4 bg-emerald-600/20 rounded-xl mb-4 group-hover:bg-emerald-600/30 transition-colors">
+                  <Phone size={32} className="text-emerald-400" />
                 </div>
-              </div>
-              <div className="space-y-2">
-                <label className="text-sm text-slate-400">Mensagem</label>
-                <textarea rows={4} className="w-full bg-dark-900 border border-white/10 rounded-lg p-3 text-white focus:ring-2 focus:ring-brand-500 outline-none" placeholder="Como posso ajudar?"></textarea>
-              </div>
-              <button className="w-full py-4 bg-brand-600 text-white font-bold rounded-lg hover:bg-brand-500 transition-colors">
-                Enviar Mensagem
-              </button>
-            </form>
+                <h3 className="text-lg font-bold text-white mb-2">WhatsApp</h3>
+                <p className="text-slate-400 text-sm">+55 (11) 98947-6691</p>
+              </a>
+            </div>
          </div>
       </section>
     </div>
