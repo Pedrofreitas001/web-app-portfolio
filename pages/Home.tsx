@@ -41,12 +41,12 @@ const Home: React.FC = () => {
             </Link>
             
             {/* Botão de Contato */}
-            <a 
-              href="#contact"
+            <Link
+              to="/contact"
               className="px-8 py-4 bg-transparent border border-white/10 rounded-lg font-bold text-white hover:bg-white/5 transition-all"
             >
               Entrar em Contato
-            </a>
+            </Link>
           </div>
         </div>
       </section>
@@ -103,9 +103,9 @@ const Home: React.FC = () => {
                 </div>
 
                 <div className="flex flex-col sm:flex-row gap-4 mt-10">
-                  <a href="#contact" className="px-8 py-3 bg-white text-dark-950 font-bold rounded-lg hover:bg-slate-200 transition-colors text-center shadow-lg shadow-white/5">
+                  <Link to="/contact" className="px-8 py-3 bg-white text-dark-950 font-bold rounded-lg hover:bg-slate-200 transition-colors text-center shadow-lg shadow-white/5">
                     Entrar em Contato
-                  </a>
+                  </Link>
                   <Link to="/projects" className="px-8 py-3 bg-brand-600/10 border border-brand-500/20 text-brand-300 font-bold rounded-lg hover:bg-brand-600/20 transition-colors text-center flex items-center justify-center gap-2 group">
                     Ver Projetos <ArrowRight size={18} className="group-hover:translate-x-1 transition-transform"/>
                   </Link>
@@ -190,32 +190,6 @@ const Home: React.FC = () => {
               </div>
             </div>
         </div>
-      </section>
-
-      {/* Contact Section Placeholder */}
-      <section id="contact" className="py-24 bg-gradient-to-b from-[#0a0a0f] to-black border-t border-white/5">
-         <div className="max-w-3xl mx-auto px-6 text-center">
-            <h2 className="text-3xl font-bold font-display text-white mb-8">Vamos trabalhar juntos?</h2>
-            <form className="space-y-4 text-left glass-panel p-8 rounded-2xl">
-              <div className="grid md:grid-cols-2 gap-4">
-                <div className="space-y-2">
-                  <label className="text-sm text-slate-400">Nome</label>
-                  <input type="text" className="w-full bg-dark-900 border border-white/10 rounded-lg p-3 text-white focus:ring-2 focus:ring-brand-500 outline-none" placeholder="Seu nome" />
-                </div>
-                <div className="space-y-2">
-                  <label className="text-sm text-slate-400">Email</label>
-                  <input type="email" className="w-full bg-dark-900 border border-white/10 rounded-lg p-3 text-white focus:ring-2 focus:ring-brand-500 outline-none" placeholder="seu@email.com" />
-                </div>
-              </div>
-              <div className="space-y-2">
-                <label className="text-sm text-slate-400">Mensagem</label>
-                <textarea rows={4} className="w-full bg-dark-900 border border-white/10 rounded-lg p-3 text-white focus:ring-2 focus:ring-brand-500 outline-none" placeholder="Como posso ajudar?"></textarea>
-              </div>
-              <button className="w-full py-4 bg-brand-600 text-white font-bold rounded-lg hover:bg-brand-500 transition-colors">
-                Enviar Mensagem
-              </button>
-            </form>
-         </div>
       </section>
     </div>
   );
