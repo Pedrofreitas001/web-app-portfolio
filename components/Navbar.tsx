@@ -31,9 +31,9 @@ const Navbar: React.FC = () => {
         <div className="hidden md:flex items-center gap-8">
           <Link to="/" className="text-sm font-medium text-slate-300 hover:text-white transition-colors">Home</Link>
           <Link to="/projects" className="text-sm font-medium text-slate-300 hover:text-white transition-colors">Projetos</Link>
-          <Link to="/contact" className="px-5 py-2.5 rounded-full bg-brand-600 text-white text-sm font-semibold hover:bg-brand-500 transition-all shadow-lg shadow-brand-500/20">
+          <a href="/#contact" className="px-5 py-2.5 rounded-full bg-brand-600 text-white text-sm font-semibold hover:bg-brand-500 transition-all shadow-lg shadow-brand-500/20">
             Contato
-          </Link>
+          </a>
         </div>
 
         {/* Mobile Toggle */}
@@ -47,7 +47,7 @@ const Navbar: React.FC = () => {
         <div className="md:hidden absolute top-full left-0 w-full bg-dark-950 border-b border-white/10 p-6 flex flex-col gap-4 shadow-2xl animate-fade-in-down">
            <Link to="/" className="text-lg font-medium text-slate-300">Home</Link>
            <Link to="/projects" className="text-lg font-medium text-slate-300">Projetos</Link>
-           <Link to="/contact" className="text-lg font-medium text-brand-400">Contato</Link>
+           <a href="/#contact" className="text-lg font-medium text-brand-400">Contato</a>
         </div>
       )}
     </nav>

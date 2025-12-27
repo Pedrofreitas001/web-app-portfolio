@@ -1,6 +1,6 @@
 import React, { useEffect, useState } from 'react';
 import { useParams, Link, useNavigate } from 'react-router-dom';
-import { ArrowLeft, ExternalLink, Github, Layers, Database, Wrench, X, ZoomIn } from 'lucide-react';
+import { ArrowLeft, ExternalLink, Github, Layers, Database, Wrench, X, ZoomIn, Download } from 'lucide-react';
 import { PROJECTS } from '../data';
 import StarBackground from '../components/StarBackground';
 
@@ -78,6 +78,16 @@ const ProjectDetail: React.FC = () => {
                  <Github size={18} /> Repositório GitHub
                </a>
              )}
+             {project.downloadableFiles && project.downloadableFiles.map((file, idx) => (
+               <a
+                 key={idx}
+                 href={file.url}
+                 download
+                 className="flex items-center gap-2 px-6 py-3 bg-emerald-600 hover:bg-emerald-500 text-white font-bold rounded-lg transition-all shadow-lg shadow-emerald-500/20"
+               >
+                 <Download size={18} /> {file.name}
+               </a>
+             ))}
            </div>
         </header>
 
