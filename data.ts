@@ -1,7 +1,7 @@
 import { Project } from './types';
 
 export const TOOLS = [
-  "Power BI", "Python", "JavaScript", "SQL", "TypeScript", "HTML", "Microsoft Fabric", "Lovable", "Streamlit", "Pandas", "React", "DAX", "M Language", "Next.js", "Tailwind CSS"
+  "Power BI", "Python", "JavaScript", "SQL", "TypeScript", "HTML", "Microsoft Fabric", "Lovable", "Streamlit", "Pandas", "React", "DAX", "M Language", "Next.js", "Tailwind CSS", "Flask", "CSS"
 ];
 
 export const PROJECTS: Project[] = [
@@ -83,6 +83,33 @@ export const PROJECTS: Project[] = [
       "https://i.imgur.com/i42clg4.png"
     ],
     liveLink: "https://afinador-violao.vercel.app/",
+    featured: true
+  },
+  {
+    id: "8",
+    slug: "pdf-master",
+    title: "PDF Master",
+    category: "Web App",
+    company: "Personal Project",
+    description: "Ferramenta web completa para edição e manipulação de arquivos PDF com múltiplas funcionalidades de transformação.",
+    coverImage: "https://i.imgur.com/0PQ5oeq.png",
+    context: "Aplicação web full-stack desenvolvida em Python com Flask, projetada para facilitar a manipulação profissional de documentos PDF de forma intuitiva e eficiente. O sistema oferece funcionalidades essenciais como mesclar múltiplos PDFs, extrair páginas específicas, dividir documentos, rotacionar páginas e comprimir arquivos. A solução combina processamento robusto de PDFs no backend utilizando PyPDF2 com uma interface front-end moderna e responsiva em HTML/CSS/JavaScript, proporcionando uma experiência fluida sem necessidade de instalação de software adicional. Todo o processamento é feito em memória, garantindo privacidade e rapidez nas operações.",
+    features: [
+      "Mesclar PDFs - Combina múltiplos arquivos PDF em um único documento mantendo a ordem",
+      "Extrair Páginas - Seleciona e extrai intervalos específicos de páginas de qualquer PDF",
+      "Dividir PDF - Separa cada página de um documento em arquivos individuais",
+      "Rotacionar Páginas - Aplica rotação de 90°, 180° ou 270° em todas as páginas",
+      "Comprimir PDF - Reduz o tamanho do arquivo removendo metadados e otimizando streams",
+      "Interface Drag & Drop - Upload intuitivo de arquivos arrastando para a área designada",
+      "Preview de Arquivos - Visualização dos nomes e quantidade de arquivos selecionados",
+      "Download Automático - Resultado processado disponibilizado instantaneamente"
+    ],
+    tools: ["Python", "Flask", "HTML", "CSS", "JavaScript"],
+    images: [
+      "https://i.imgur.com/ED9Rl9j.png",
+      "https://i.imgur.com/ZIy5YZA.png"
+    ],
+    liveLink: "https://webapp-pdf.vercel.app/",
     featured: true
   }
 ];

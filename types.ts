@@ -8,6 +8,7 @@ export interface Project {
   coverImage: string;
   context: string;
   dataset?: string;
+  features?: string[];
   tools: string[];
   images: string[];
   repoLink?: string;
