@@ -1,7 +1,7 @@
 import { Project } from './types';
 
 export const TOOLS = [
-  "Power BI", "Python", "JavaScript", "SQL", "TypeScript", "HTML", "Microsoft Fabric", "Lovable", "Streamlit", "Pandas", "React", "DAX", "M Language", "Next.js", "Tailwind CSS", "Flask", "CSS"
+  "Power BI", "Python", "JavaScript", "SQL", "TypeScript", "HTML", "Microsoft Fabric", "Lovable", "Streamlit", "Pandas", "React", "DAX", "M Language", "Next.js", "Tailwind CSS", "Flask", "CSS", "Supabase", "PostgreSQL", "Zustand"
 ];
 
 export const PROJECTS: Project[] = [
@@ -110,6 +110,39 @@ export const PROJECTS: Project[] = [
       "https://i.imgur.com/ZIy5YZA.png"
     ],
     liveLink: "https://webapp-pdf.vercel.app/",
+    featured: true
+  },
+  {
+    id: "9",
+    slug: "minha-biblioteca",
+    title: "Minha Biblioteca",
+    category: "Web App",
+    company: "Personal Project",
+    description: "Aplicação web moderna para catalogar e gerenciar sua biblioteca pessoal digital com sincronização em nuvem.",
+    coverImage: "https://i.imgur.com/49GsmNP.png",
+    context: "Minha Biblioteca Pessoal é uma aplicação web moderna para catalogar e gerenciar livros de forma digital. O projeto foi desenvolvido para resolver o problema de controlar uma biblioteca pessoal de forma organizada, permitindo que você adicione livros manualmente, escaneie códigos de barras (ISBN), busque informações automáticas na API do Google Books e mantenha seus dados sincronizados na nuvem através do Supabase. A aplicação oferece uma experiência completa de gerenciamento de biblioteca, incluindo filtros por status de leitura, sistema de tags, anotações pessoais, avaliações e estatísticas detalhadas sobre seus hábitos de leitura. Com autenticação integrada, cada usuário tem acesso exclusivo aos seus próprios livros, com dados protegidos por Row Level Security. O sistema foi construído com foco em performance e responsividade, funcionando perfeitamente tanto em desktop quanto em dispositivos móveis, com um design moderno e intuitivo.",
+    features: [
+      "Adicionar livros manualmente com formulário completo",
+      "Buscar livros automaticamente pela API do Google Books",
+      "Escanear código de barras (ISBN) com câmera",
+      "Importar livros em lote via arquivo Excel",
+      "Pesquisa por título, autor ou ISBN",
+      "Filtro por status: Lendo, Lido, Quero Ler, Wishlist",
+      "Sistema de tags customizáveis",
+      "Avaliação com estrelas e anotações pessoais",
+      "Dashboard com estatísticas de leitura",
+      "Autenticação com email e senha",
+      "Dados isolados por usuário (Row Level Security)",
+      "Layout responsivo mobile-first",
+      "Sincronização automática entre dispositivos"
+    ],
+    tools: ["React", "TypeScript", "Vite", "Tailwind CSS", "Supabase", "PostgreSQL", "Zustand"],
+    images: [
+      "https://i.imgur.com/hPo9viI.png",
+      "https://i.imgur.com/hp4G7K1.png",
+      "https://i.imgur.com/QFDMwbP.png"
+    ],
+    liveLink: "https://app-estante-virtual.vercel.app/",
     featured: true
   }
 ];
