@@ -1,6 +1,6 @@
 import React, { useEffect, useState } from 'react';
 import { useParams, Link, useNavigate } from 'react-router-dom';
-import { ArrowLeft, ExternalLink, Github, Layers, Database, Wrench, X, ZoomIn, Download } from 'lucide-react';
+import { ArrowLeft, ExternalLink, Github, Layers, Database, Wrench, X, ZoomIn, Download, CheckCircle } from 'lucide-react';
 import { PROJECTS } from '../data';
 import StarBackground from '../components/StarBackground';
 
@@ -105,6 +105,24 @@ const ProjectDetail: React.FC = () => {
                    {project.context}
                  </p>
               </section>
+
+              {/* Features */}
+              {project.features && (
+                <section className="glass-panel p-8 rounded-2xl animate-fade-in-up" style={{ animationDelay: '0.15s' }}>
+                   <div className="flex items-center gap-3 mb-6 text-purple-400">
+                      <CheckCircle size={24} />
+                      <h2 className="text-2xl font-bold font-display text-white">Funcionalidades</h2>
+                   </div>
+                   <ul className="space-y-3">
+                     {project.features.map((feature, idx) => (
+                       <li key={idx} className="flex items-start gap-3 text-slate-300 leading-relaxed">
+                         <CheckCircle size={20} className="text-emerald-400 flex-shrink-0 mt-0.5" />
+                         <span>{feature}</span>
+                       </li>
+                     ))}
+                   </ul>
+                </section>
+              )}
 
               {/* Dataset */}
               {project.dataset && (
