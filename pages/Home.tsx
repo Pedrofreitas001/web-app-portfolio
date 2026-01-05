@@ -70,7 +70,7 @@ const Home: React.FC = () => {
 
                 <div className="space-y-4 text-slate-300 leading-relaxed">
                   <p>
-                    Oceanógrafo pela Universidade de São Paulo (USP), com cerca de dois anos de experiência em análise e engenharia de dados.
+                    Formado pela Universidade de São Paulo (USP), com cerca de dois anos de experiência em análise e engenharia de dados.
                     Atuou em projetos de consultoria nas áreas de engenharia, meio ambiente e energia, com foco no desenvolvimento de pipelines de dados,
                     fluxos de automação e dashboards interativos em Power BI.
                   </p>
@@ -128,7 +128,7 @@ const Home: React.FC = () => {
 
                <div className="text-center mt-6">
                  <h3 className="text-xl font-bold text-white">Pedro Freitas</h3>
-                 <p className="text-sm text-slate-400 mt-1">Oceanógrafo & Data Engineer</p>
+                 <p className="text-sm text-slate-400 mt-1">Data Engineer</p>
                  <a
                    href="https://www.linkedin.com/in/pedrofreitas0/"
                    target="_blank"
