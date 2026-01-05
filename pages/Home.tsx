@@ -128,7 +128,7 @@ const Home: React.FC = () => {
 
                <div className="text-center mt-6">
                  <h3 className="text-xl font-bold text-white">Pedro Freitas</h3>
-                 <p className="text-sm text-slate-400 mt-1">Formado & Data Engineer</p>
+                 <p className="text-sm text-slate-400 mt-1">Oceanógrafo & Data Engineer</p>
                  <a
                    href="https://www.linkedin.com/in/pedrofreitas0/"
                    target="_blank"
