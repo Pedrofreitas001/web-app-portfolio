@@ -119,7 +119,7 @@ const Home: React.FC = () => {
                  <div className="absolute inset-0 bg-gradient-to-tr from-brand-600 to-purple-600 rounded-full blur-2xl opacity-30 group-hover:opacity-50 transition-opacity duration-500"></div>
                  <div className="relative w-48 h-48 md:w-56 md:h-56 rounded-full overflow-hidden border-4 border-white/10 shadow-2xl">
                    <img
-                     src="/images/bio/profile.png"
+                     src="/images/original/foto-perfil.png"
                      alt="Pedro Freitas"
                      className="w-full h-full object-cover filter brightness-105"
                    />
