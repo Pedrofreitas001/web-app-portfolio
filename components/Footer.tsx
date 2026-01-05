@@ -9,17 +9,17 @@ const Footer: React.FC = () => {
       <div className="max-w-7xl mx-auto px-6 flex flex-col md:flex-row justify-between items-center gap-6">
         <div className="text-center md:text-left">
           <h3 className="text-xl font-bold font-display text-white mb-2">Pedro Freitas</h3>
-          <p className="text-slate-400 text-sm">Engenharia de Dados & Oceanografia</p>
+          <p className="text-slate-400 text-sm">Engenharia de Dados</p>
         </div>
 
         <div className="flex items-center gap-6">
-          <a href="#" className="p-3 rounded-full bg-slate-800 text-slate-300 hover:bg-brand-600 hover:text-white transition-all transform hover:-translate-y-1">
+          <a href="https://www.linkedin.com/in/pedrofreitas0/" target="_blank" rel="noopener noreferrer" className="p-3 rounded-full bg-slate-800 text-slate-300 hover:bg-brand-600 hover:text-white transition-all transform hover:-translate-y-1">
             <Linkedin size={20} />
           </a>
           <a href="#" className="p-3 rounded-full bg-slate-800 text-slate-300 hover:bg-brand-600 hover:text-white transition-all transform hover:-translate-y-1">
             <Github size={20} />
           </a>
-          <a href="mailto:pedro@example.com" className="p-3 rounded-full bg-slate-800 text-slate-300 hover:bg-brand-600 hover:text-white transition-all transform hover:-translate-y-1">
+          <a href="mailto:pedrofreitas@usp.br" className="p-3 rounded-full bg-slate-800 text-slate-300 hover:bg-brand-600 hover:text-white transition-all transform hover:-translate-y-1">
             <Mail size={20} />
           </a>
         </div>
