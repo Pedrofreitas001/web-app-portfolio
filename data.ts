@@ -13,8 +13,8 @@ export const PROJECTS: Project[] = [
     company: "Ifood",
     description: "Análise completa de dados de restaurantes do iFood com visualizações interativas.",
     coverImage: "/images/original/Ifood-capa.png",
-    context: "Ao estudar os pedidos no site do Ifood, percebi que seria possível extrair informações de todos os restaurantes usando a API do Ifood e alguns dados geoespaciais. O conjunto de dados contém informações sobre todos os restaurantes no iFood em fevereiro de 2021 e novembro de 2020. Os dados incluem nomes dos restaurantes, logotipos, categorias, taxas, localizações, faixa de preços e mais.",
-    dataset: "Informações de fevereiro 2021 e novembro 2020 (nomes, logos, categorias, taxas, localizações, faixa de preços). Dados tratados para garantir anonimização de clientes sensíveis.",
+    context: "Este projeto foi desenvolvido como estudo de caso para demonstrar habilidades em análise de dados e visualização. Utilizei um dataset público disponível no Kaggle que contém informações agregadas sobre restaurantes do setor de delivery, referentes aos períodos de novembro/2020 e fevereiro/2021. O objetivo foi explorar padrões de mercado, distribuição geográfica e categorias de estabelecimentos, aplicando técnicas de ETL, modelagem de dados e construção de dashboards interativos.\n\n**Disclaimer:** Este é um projeto pessoal de portfólio, desenvolvido exclusivamente para fins educacionais e demonstração de competências técnicas. Os dados utilizados são públicos e não contêm informações comerciais sensíveis ou dados pessoais de clientes. Este projeto não possui qualquer vínculo, associação comercial ou endosso de empresas do setor.",
+    dataset: "Informações de novembro/2020 e fevereiro/2021 (categorias, taxas, localizações, faixa de preços). Fonte: dataset público do Kaggle com dados agregados do setor de delivery.",
     tools: ["DAX", "M Language", "Power BI", "Microsoft Fabric"],
     images: [
       "/images/original/ifood-2.png",
