@@ -65,7 +65,7 @@ export const PROJECTS: Project[] = [
       "/images/original/faroldev-3.png",
       "/images/original/faro2ldev-4.png"
     ],
-    liveLink: "https://farol-dev-moc.vercel.app/",
+    liveLink: "https://faroldev.com.br/",
     featured: true
   },
   {
