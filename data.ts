@@ -41,12 +41,6 @@ export const PROJECTS: Project[] = [
       "/images/original/Automação-conciliacao-financeira-2.png"
     ],
     liveLink: "https://dashboard-contabil.vercel.app/",
-    downloadableFiles: [
-      {
-        name: "Baixar Excel Modelo",
-        url: "https://docs.google.com/spreadsheets/d/1dJgSf4iS-GdzWk4b3zS_FkwLdvqq_5FjhummuCNTruU/export?format=xlsx"
-      }
-    ],
     featured: true
   },
   {
