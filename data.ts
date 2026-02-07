@@ -73,25 +73,25 @@ export const PROJECTS: Project[] = [
     liveLink: "https://faroldev.com.br/",
     featured: true
   },
-  {
-    id: "7",
-    slug: "afinador-pro",
-    title: "Afinador PRO",
-    category: "Web App",
-    company: "Projeto pessoal",
-    description: "Web App de um afinador de violão e guitarra.",
-    coverImage: "/images/original/capa-afinador.png",
-    context: "Aplicação web desenvolvida em Python com interface front-end interativa, projetada para auxiliar na afinação precisa do violão em tempo real. O sistema capta o áudio, identifica a frequência das cordas e fornece feedback visual claro e intuitivo, permitindo ajustes rápidos e precisos. A solução combina processamento de sinais no backend com uma experiência de uso simples e responsiva no front-end.",
-    tools: ["Python", "React", "Tailwind CSS"],
-    images: [
-      "/images/original/afinador-1.png",
-      "/images/original/afinador-2.png",
-      "/images/original/Afinador-3.png",
-      "/images/original/afinador-4.png"
-    ],
-    liveLink: "https://afinador-violao.vercel.app/",
-    featured: true
-  },
+  //{
+  //  id: "7",
+  //  slug: "afinador-pro",
+   // title: "Afinador PRO",
+   // category: "Web App",
+   // company: "Projeto pessoal",
+   // description: "Web App de um afinador de violão e guitarra.",
+   // coverImage: "/images/original/capa-afinador.png",
+   // context: "Aplicação web desenvolvida em Python com interface front-end interativa, projetada para auxiliar na afinação precisa do violão em tempo real. O sistema capta o áudio, identifica a frequência das cordas e fornece feedback visual claro e intuitivo, permitindo ajustes rápidos e precisos. A solução combina processamento de sinais no backend com uma experiência de uso simples e responsiva no front-end.",
+   // tools: ["Python", "React", "Tailwind CSS"],
+   // images: [
+   //   "/images/original/afinador-1.png",
+   //   "/images/original/afinador-2.png",
+   //   "/images/original/Afinador-3.png",
+   //   "/images/original/afinador-4.png"
+  // ],
+  //  liveLink: "https://afinador-violao.vercel.app/",
+  //  featured: true
+  //},
   {
     id: "8",
     slug: "zaya_tarot",
