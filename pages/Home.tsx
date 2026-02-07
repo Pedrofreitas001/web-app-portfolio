@@ -52,7 +52,7 @@ const Home: React.FC = () => {
         </div>
       </section>
 
-      
+
 
       {/* 2. ABOUT ME SECTION */}
       <section className="py-24 bg-gradient-to-b from-[#0a0a0f] to-[#0f0f14] relative overflow-hidden border-t border-white/5">
@@ -148,14 +148,15 @@ const Home: React.FC = () => {
 
 
       {/* GITHUB FREQUENCY SECTION */}
-      <section className="pt-20 pb-32">
-        <h3 className="text-xl font-bold text-white mb-4 text-center">
+      <section className="relative pt-20 pb-32 overflow-hidden bg-gradient-to-b from-black via-[#030308] to-black">
+        <StarBackground />
+        <h3 className="text-xl font-bold text-white mb-4 text-center relative z-10">
           Atividade no GitHub
         </h3>
-        <p className="text-slate-400 text-sm text-center mb-8">
+        <p className="text-slate-400 text-sm text-center mb-8 relative z-10">
           Frequência de commits e evolução contínua dos projetos
         </p>
-        <div className="flex justify-center">
+        <div className="flex justify-center relative z-10">
           <GitHubActivity />
         </div>
       </section>
