@@ -35,7 +35,7 @@ const Projects: React.FC = () => {
             Projetos<span className="text-brand-500">.</span>
           </h1>
           <p className="text-xl text-slate-400 max-w-2xl">
-             Explore uma coleção de dashboards, automações e sistemas web desenvolvidos para resolver problemas reais.
+             Explore uma coleção de dashboards, automações e sistemas web desenvolvidos para resolver problemas reais e demonstração técnica.
           </p>
         </div>
 
