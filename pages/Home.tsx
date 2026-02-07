@@ -78,8 +78,8 @@ const Home: React.FC = () => {
                     fluxos de automação e dashboards interativos em Power BI.
                   </p>
                   <p>
-                    Possui experiência com <span className="text-brand-300 font-medium">Python, Pandas, TypeScript, SQL, MMLS, Power BI DAX, M, Power Automate, Microsoft Fabric, Web Applications</span>.
-                    Interessado em inteligência artificial e em soluções tecnológicas voltadas à inovação e à eficiência de processos.
+                    Possui experiência com <span className="text-brand-300 font-medium">Python, Pandas, TypeScript, SQL, LLMs, Engenharia de prompt, Power BI DAX, M, Power Automate, Microsoft Fabric, Web Applications</span>.
+                    Interessado processos de aplicação de inteligência artificial e soluções tecnológicas voltadas à inovação e à eficiência de processos.
                   </p>
                 </div>
 
