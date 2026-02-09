@@ -27,6 +27,27 @@ export const PROJECTS: Project[] = [
     featured: true
   },
   {
+  id: "10",
+  slug: "dashboard-vendas-powerbi",
+  title: "Dashboard de Vendas",
+  category: "Dashboard Power BI",
+  company: "Projeto Analítico",
+  description: "Dashboard analítico de vendas com indicadores financeiros, desempenho comercial e análise de produtos e clientes.",
+  coverImage: "/images/original/DT_CAPA.jpg",
+  context: "Projeto de Business Intelligence desenvolvido em Power BI com foco na análise de desempenho comercial e financeiro a partir de dados de vendas. O dashboard foi estruturado para fornecer uma visão executiva do negócio, permitindo o acompanhamento de indicadores-chave como receita, lucro, custo, margem bruta e volume de vendas, além de análises detalhadas por vendedor, produto e cliente. A modelagem e o tratamento dos dados priorizaram consistência, clareza analítica e suporte à tomada de decisão.",
+  dataset: "Os dados utilizados representam registros de vendas estruturados em nível transacional, incluindo informações financeiras, produtos, vendedores e clientes. O tratamento foi realizado no Power Query, com separação em múltiplas queries para organização do modelo, criação de tabelas auxiliares (como calendário) e preparação dos dados para análise eficiente no Power BI.",
+  
+  tools: ["Power BI", "DAX", "M Language", "Power Query"],
+  images: [
+    "/images/original/DT1.jpg",
+    "/images/original/DT2.jpg",
+  
+  ],
+  embedUrl: "https://app.powerbi.com/view?r=eyJrIjoiZDg0ZmY5YjctMWI0YS00OGUyLWJkNDQtOTUxZGIyYWY3M2YwIiwidCI6IjdlOTNlMjg2LWIyOWEtNDQ1NC1hNDFhLWU4NDE5ZWM5ZGViNSJ9",
+  featured: true
+}
+,
+  {
     id: "4",
     slug: "Dashboard-financeflow",
     title: "FinanceFlow Dashboard",
@@ -54,7 +75,7 @@ export const PROJECTS: Project[] = [
     //],
     featured: true
   },
-  {
+ /*{
     id: "5",
     slug: "site-farol-dev",
     title: "Site Farol Dev",
@@ -72,7 +93,8 @@ export const PROJECTS: Project[] = [
     ],
     liveLink: "https://faroldev.com.br/",
     featured: true
-  },
+  }*/, 
+
   //{
   //  id: "7",
   //  slug: "afinador-pro",
@@ -142,10 +164,10 @@ export const PROJECTS: Project[] = [
     liveLink: "https://zayatarot.com/",
     featured: true
   },
- // {
-   // id: "9",
-   // slug: "minha-biblioteca",
-   // title: "Minha Biblioteca",
+ 
+
+ 
+
    // category: "Web App",
    // company: "Personal Project",
    // description: "Aplicação web moderna para catalogar e gerenciar sua biblioteca pessoal digital com sincronização em nuvem.",
